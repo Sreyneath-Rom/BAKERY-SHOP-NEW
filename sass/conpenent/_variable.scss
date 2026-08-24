@@ -10,6 +10,18 @@ $footer-bg-color: #f7e6e6;
 $secondary-color: #e8505b;
 $muted-color: #888;
 $primary-color: rgb(212, 53, 106);
-$border-radius: 15px;
 $input-background: gainsboro;
 $box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+$border-radius: 16px;
+$input-background: rgba(255, 255, 255, 0.4);
+
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.35);
+  --glass-strong-bg: rgba(255, 255, 255, 0.65);
+  --glass-specular-top: rgba(255, 255, 255, 0.8);
+  --glass-specular-bottom: rgba(255, 255, 255, 0.15);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  --glass-strong-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
+  --glass-inner-glow: inset 0 0 12px 0 rgba(255, 255, 255, 0.3);
+}

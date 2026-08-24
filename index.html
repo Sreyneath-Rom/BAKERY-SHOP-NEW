@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cakery Charm</title>
     <link rel="stylesheet" href="css/main.css">
-</head>
+    <style>
+        .carousel-container {
+            position: relative;
+            max-width: 1000px;
+            height: 400px;
+            margin: 20px auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
 
-<body>
-    <nav>
+        .banner-slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .banner-slide.active {
+            display: block;
+        }
+    </style>
+</head>
+<body style="background: linear-gradient(135deg, #f7e6e6 0%, #ecd5e3 100%); min-height: 100vh;">
+    <!-- Sticky Glass Navigation -->
+    <nav class="glass-strong" style="position: sticky; top: 0; z-index: 1000; border-radius: 0 0 16px 16px;">
         <div class="nav-left">
             <img class="logo" src="./images/logo.png" alt="Cakery Charm Logo">
             <span>Cakery Charm</span>
@@ -20,141 +41,125 @@
                 <li><a href="./pages/menu.html">Menu</a></li>
                 <li><a href="./pages/about.html">About</a></li>
                 <li><a href="./pages/contact.html">Contact</a></li>
-
             </ul>
         </div>
     </nav>
-    <div class="w3-content w3-section">
-        <img class="mySlides" src="./images/morning.png" style="width:100%">
-        <img class="mySlides" src="./images/afternoon.png" style="width:100%">
-        <img class="mySlides" src="./images/evening.png" style="width:100%">
+
+    <!-- Dynamic HTML Banner Carousel -->
+    <div class="carousel-container">
+        <iframe class="banner-slide active" src="./pages/components/banner-morning.html" title="Morning Set Banner"></iframe>
+        <iframe class="banner-slide" src="./pages/components/banner-afternoon.html" title="Afternoon Set Banner"></iframe>
+        <iframe class="banner-slide" src="./pages/components/banner-evening.html" title="Evening Set Banner"></iframe>
     </div>
 
-    <script>
-        var myIndex = 0;
-        carousel();
-
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            myIndex++;
-            if (myIndex > x.length) { myIndex = 1 }
-            x[myIndex - 1].style.display = "block";
-            setTimeout(carousel, 3000);
-        }
-    </script>
-
-    <section class="welcome-section">
+    <!-- Welcome Section in Glass Card -->
+    <section class="welcome-section glass" style="margin: 30px; padding: 40px; border-radius: 20px;">
         <h2>Welcome To CAKERY CHARM Bakery Shop</h2>
-        <p>Welcome to our bakery. Whether you're stopping by for a morning coffee or planning a special celebration, our
-            bakery is here to delight your taste buds and create sweet moments. Come visit us and indulge in the warmth
-            of freshly baked goodness!</p>
+        <p>Welcome to our bakery. Whether you're stopping by for a morning coffee or planning a special celebration, our bakery is here to delight your taste buds and create sweet moments. Come visit us and indulge in the warmth of freshly baked goodness!</p>
     </section>
+
+    <!-- Product Category Grid with Glass Hover Effects -->
     <section class="product-section">
         <h2>Product</h2>
         <p>Browse our top categories here to discover different food cuisines.</p>
         <div class="category-grid">
-            <div class="category-item">
+            <div class="category-item glass glass-interactive" style="border-radius: 16px; padding: 20px;">
                 <img class="card" src="./images/drink.png" alt="Drinks">
                 <span>DRINK</span>
             </div>
-            <div class="category-item">
+            <div class="category-item glass glass-interactive" style="border-radius: 16px; padding: 20px;">
                 <img class="card" src="./images/cake.png" alt="Cakes">
                 <span>CAKE</span>
             </div>
-            <div class="category-item">
+            <div class="category-item glass glass-interactive" style="border-radius: 16px; padding: 20px;">
                 <img class="card" src="./images/brand.png" alt="Breads">
                 <span>BREAD</span>
             </div>
-            <div class="category-item">
+            <div class="category-item glass glass-interactive" style="border-radius: 16px; padding: 20px;">
                 <img class="card" src="./images/sandwiche.png" alt="Sandwiches">
                 <span>SANDWICH</span>
             </div>
         </div>
     </section>
+
+    <!-- Popular Bakery Section with Glass Cards -->
     <section class="popular-bakery">
         <h2>Popular Bakery</h2>
         <p>Find nearby popular bakery items</p>
         <div class="bakery-grid">
-            <div class="bakery-item">
+            <div class="bakery-item glass glass-interactive" style="border-radius: 16px; padding: 15px;">
                 <img class="card" src="./images/baguette.png" alt="Baguette">
                 <span>BAGUETTE</span>
                 <p>$2.5</p>
             </div>
-            <div class="bakery-item">
+            <div class="bakery-item glass glass-interactive" style="border-radius: 16px; padding: 15px;">
                 <img class="card" src="./images/chocolate.png" alt="Chocolate">
                 <span>CHOCOLATE</span>
                 <p>$3.5</p>
             </div>
-            <div class="bakery-item">
+            <div class="bakery-item glass glass-interactive" style="border-radius: 16px; padding: 15px;">
                 <img class="card" src="./images/multigrain.png" alt="Multigrain">
                 <span>MULTIGRAIN</span>
                 <p>$2.4</p>
             </div>
-            <div class="bakery-item">
+            <div class="bakery-item glass glass-interactive" style="border-radius: 16px; padding: 15px;">
                 <img class="card" src="./images/strawberry drink.png" alt="Strawberry">
                 <span>STRAWBERRY</span>
                 <p>$1.5</p>
             </div>
-            <div class="bakery-item">
+            <div class="bakery-item glass glass-interactive" style="border-radius: 16px; padding: 15px;">
                 <img class="card" src="./images/sandwich.png" alt="Sandwich">
                 <span>SANDWICH</span>
                 <p>$1.5</p>
             </div>
-            <div class="bakery-item">
+            <div class="bakery-item glass glass-interactive" style="border-radius: 16px; padding: 15px;">
                 <img class="card" src="./images/craqelin.png" alt="Cragelin Pastry">
                 <span>CRAQELIN</span>
                 <p>$1.5</p>
             </div>
         </div>
-        <div class="button-group">
-            <button><a href="./pages/menu.html">See full menu</a></button>
-            <button><a href="./pages/contact.html">Order now</a></button>
+        <div class="button-group" style="margin-top: 30px;">
+            <button class="glass-org glass-interactive" style="padding: 12px 24px; border: none; border-radius: 25px;"><a href="./pages/menu.html" style="color: inherit; text-decoration: none;">See full menu</a></button>
+            <button class="glass-teal glass-interactive" style="padding: 12px 24px; border: none; border-radius: 25px;"><a href="./pages/contact.html" style="color: #fff; text-decoration: none;">Order now</a></button>
         </div>
     </section>
-    <footer>
+
+    <!-- Glass Footer -->
+    <footer class="glass-strong" style="margin-top: 40px; border-radius: 24px 24px 0 0;">
         <div class="footer-section about-us">
             <h2>About Us</h2>
-            <p>Where fresh, delicious treats are baked daily. We specialize in artisan bread and pastries, using only
-                the finest ingredients to ensure every bite is perfect.</p>
+            <p>Where fresh, delicious treats are baked daily. We specialize in artisan bread and pastries, using only the finest ingredients to ensure every bite is perfect.</p>
             <h2>Open Hours</h2>
-            <p>Monday-Saturday:7:00 AM-9:00 PM</p>
+            <p>Monday-Saturday: 7:00 AM-9:00 PM</p>
             <p>Sunday: 8:00 AM - 7:00 PM</p>
         </div>
         <div class="footer-section contact-us">
             <h2>Contact Us</h2>
-            <div class="icon">
-                <img src="../images/icon/i-tp.png" alt="">
-                <p>123-456-789</p>
-            </div>
-            <div class="icon">
-                <img src="../images/icon/i-map.png" alt="">
-                <p>Phnom Penh</p>
-            </div>
-            <div class="icon">
-                <img src="../images/icon/i-em.png" alt="">
-                <p>cakerycharm@gmail.com</p>
-            </div>
-
+            <div class="icon"><img src="./images/icon/i-tp.png" alt="Phone"><p>123-456-789</p></div>
+            <div class="icon"><img src="./images/icon/i-map.png" alt="Location"><p>Phnom Penh</p></div>
+            <div class="icon"><img src="./images/icon/i-em.png" alt="Email"><p>cakerycharm@gmail.com</p></div>
         </div>
         <div class="footer-section social-media">
             <h2>Social Media</h2>
-            <div class="icon">
-                <img src="../images/icon/i-fb.png" alt="">
-                <p>cakerycharm</p>
-            </div>
-            <div class="icon">
-                <img src="../images/icon/i-ig.png" alt="">
-                <p>cakerycharm</p>
-            </div>
-            <div class="icon">
-                <img src="../images/icon/i-wa.png" alt="">
-                <p>cakerycharm</p>
-            </div>
+            <div class="icon"><img src="./images/icon/i-fb.png" alt="Facebook"><p>cakerycharm</p></div>
+            <div class="icon"><img src="./images/icon/i-ig.png" alt="Instagram"><p>cakerycharm</p></div>
+            <div class="icon"><img src="./images/icon/i-wa.png" alt="WhatsApp"><p>cakerycharm</p></div>
         </div>
     </footer>
+
+    <!-- Banner Slide Carousel Script -->
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.banner-slide');
+
+        function showNextSlide() {
+            slides[slideIndex].classList.remove('active');
+            slideIndex = (slideIndex + 1) % slides.length;
+            slides[slideIndex].classList.add('active');
+        }
+
+        // Change slide every 4 seconds
+        setInterval(showNextSlide, 4000);
+    </script>
 </body>
 </html>
