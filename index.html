@@ -3,163 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cakery Charm</title>
+    <title>Cakery Charm | Freshly baked, thoughtfully made</title>
     <link rel="stylesheet" href="css/main.css">
-    <style>
-        .carousel-container {
-            position: relative;
-            max-width: 1000px;
-            height: 400px;
-            margin: 20px auto;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .banner-slide {
-            display: none;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        .banner-slide.active {
-            display: block;
-        }
-    </style>
+    <meta name="description" content="Cakery Charm bakery: fresh bread, cakes, sandwiches, and drinks baked daily in Phnom Penh.">
 </head>
-<body style="background: linear-gradient(135deg, #f7e6e6 0%, #ecd5e3 100%); min-height: 100vh;">
-    <!-- Sticky Glass Navigation -->
-    <nav class="glass-strong" style="position: sticky; top: 0; z-index: 1000; border-radius: 0 0 16px 16px;">
-        <div class="nav-left">
-            <img class="logo" src="./images/logo.png" alt="Cakery Charm Logo">
-            <span>Cakery Charm</span>
-        </div>
-        <div class="nav-right">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="./pages/menu.html">Menu</a></li>
-                <li><a href="./pages/about.html">About</a></li>
-                <li><a href="./pages/contact.html">Contact</a></li>
-            </ul>
-        </div>
+<body>
+    <nav class="site-nav">
+        <a class="nav-left" href="index.html" aria-label="Cakery Charm home"><img class="logo" src="./images/logo.png" alt=""><span>Cakery Charm</span></a>
+        <div class="nav-right"><ul><li><a class="active" href="index.html">Home</a></li><li><a href="./pages/menu.html">Menu</a></li><li><a href="./pages/about.html">About</a></li><li><a href="./pages/contact.html">Contact</a></li></ul></div>
     </nav>
-
-    <!-- Dynamic HTML Banner Carousel -->
-    <div class="carousel-container">
-        <iframe class="banner-slide active" src="./pages/components/banner-morning.html" title="Morning Set Banner"></iframe>
-        <iframe class="banner-slide" src="./pages/components/banner-afternoon.html" title="Afternoon Set Banner"></iframe>
-        <iframe class="banner-slide" src="./pages/components/banner-evening.html" title="Evening Set Banner"></iframe>
-    </div>
-
-    <!-- Welcome Section in Glass Card -->
-    <section class="welcome-section glass" style="margin: 30px; padding: 40px; border-radius: 20px;">
-        <h2>Welcome To CAKERY CHARM Bakery Shop</h2>
-        <p>Welcome to our bakery. Whether you're stopping by for a morning coffee or planning a special celebration, our bakery is here to delight your taste buds and create sweet moments. Come visit us and indulge in the warmth of freshly baked goodness!</p>
-    </section>
-
-    <!-- Product Category Grid with Glass Hover Effects -->
-    <section class="product-section">
-        <h2>Product</h2>
-        <p>Browse our top categories here to discover different food cuisines.</p>
-        <div class="category-grid">
-            <div class="category-item glass glass-interactive" style="border-radius: 16px; padding: 20px;">
-                <img class="card" src="./images/drink.png" alt="Drinks">
-                <span>DRINK</span>
-            </div>
-            <div class="category-item glass glass-interactive" style="border-radius: 16px; padding: 20px;">
-                <img class="card" src="./images/cake.png" alt="Cakes">
-                <span>CAKE</span>
-            </div>
-            <div class="category-item glass glass-interactive" style="border-radius: 16px; padding: 20px;">
-                <img class="card" src="./images/brand.png" alt="Breads">
-                <span>BREAD</span>
-            </div>
-            <div class="category-item glass glass-interactive" style="border-radius: 16px; padding: 20px;">
-                <img class="card" src="./images/sandwiche.png" alt="Sandwiches">
-                <span>SANDWICH</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Popular Bakery Section with Glass Cards -->
-    <section class="popular-bakery">
-        <h2>Popular Bakery</h2>
-        <p>Find nearby popular bakery items</p>
-        <div class="bakery-grid">
-            <div class="bakery-item glass glass-interactive" style="border-radius: 16px; padding: 15px;">
-                <img class="card" src="./images/baguette.png" alt="Baguette">
-                <span>BAGUETTE</span>
-                <p>$2.5</p>
-            </div>
-            <div class="bakery-item glass glass-interactive" style="border-radius: 16px; padding: 15px;">
-                <img class="card" src="./images/chocolate.png" alt="Chocolate">
-                <span>CHOCOLATE</span>
-                <p>$3.5</p>
-            </div>
-            <div class="bakery-item glass glass-interactive" style="border-radius: 16px; padding: 15px;">
-                <img class="card" src="./images/multigrain.png" alt="Multigrain">
-                <span>MULTIGRAIN</span>
-                <p>$2.4</p>
-            </div>
-            <div class="bakery-item glass glass-interactive" style="border-radius: 16px; padding: 15px;">
-                <img class="card" src="./images/strawberry drink.png" alt="Strawberry">
-                <span>STRAWBERRY</span>
-                <p>$1.5</p>
-            </div>
-            <div class="bakery-item glass glass-interactive" style="border-radius: 16px; padding: 15px;">
-                <img class="card" src="./images/sandwich.png" alt="Sandwich">
-                <span>SANDWICH</span>
-                <p>$1.5</p>
-            </div>
-            <div class="bakery-item glass glass-interactive" style="border-radius: 16px; padding: 15px;">
-                <img class="card" src="./images/craqelin.png" alt="Cragelin Pastry">
-                <span>CRAQELIN</span>
-                <p>$1.5</p>
-            </div>
-        </div>
-        <div class="button-group" style="margin-top: 30px;">
-            <button class="glass-org glass-interactive" style="padding: 12px 24px; border: none; border-radius: 25px;"><a href="./pages/menu.html" style="color: inherit; text-decoration: none;">See full menu</a></button>
-            <button class="glass-teal glass-interactive" style="padding: 12px 24px; border: none; border-radius: 25px;"><a href="./pages/contact.html" style="color: #fff; text-decoration: none;">Order now</a></button>
-        </div>
-    </section>
-
-    <!-- Glass Footer -->
-    <footer class="glass-strong" style="margin-top: 40px; border-radius: 24px 24px 0 0;">
-        <div class="footer-section about-us">
-            <h2>About Us</h2>
-            <p>Where fresh, delicious treats are baked daily. We specialize in artisan bread and pastries, using only the finest ingredients to ensure every bite is perfect.</p>
-            <h2>Open Hours</h2>
-            <p>Monday-Saturday: 7:00 AM-9:00 PM</p>
-            <p>Sunday: 8:00 AM - 7:00 PM</p>
-        </div>
-        <div class="footer-section contact-us">
-            <h2>Contact Us</h2>
-            <div class="icon"><img src="./images/icon/i-tp.png" alt="Phone"><p>123-456-789</p></div>
-            <div class="icon"><img src="./images/icon/i-map.png" alt="Location"><p>Phnom Penh</p></div>
-            <div class="icon"><img src="./images/icon/i-em.png" alt="Email"><p>cakerycharm@gmail.com</p></div>
-        </div>
-        <div class="footer-section social-media">
-            <h2>Social Media</h2>
-            <div class="icon"><img src="./images/icon/i-fb.png" alt="Facebook"><p>cakerycharm</p></div>
-            <div class="icon"><img src="./images/icon/i-ig.png" alt="Instagram"><p>cakerycharm</p></div>
-            <div class="icon"><img src="./images/icon/i-wa.png" alt="WhatsApp"><p>cakerycharm</p></div>
-        </div>
-    </footer>
-
-    <!-- Banner Slide Carousel Script -->
-    <script>
-        let slideIndex = 0;
-        const slides = document.querySelectorAll('.banner-slide');
-
-        function showNextSlide() {
-            slides[slideIndex].classList.remove('active');
-            slideIndex = (slideIndex + 1) % slides.length;
-            slides[slideIndex].classList.add('active');
-        }
-
-        // Change slide every 4 seconds
-        setInterval(showNextSlide, 4000);
-    </script>
+    <main class="home-page">
+        <section class="hero" aria-labelledby="hero-title"><div class="hero-copy"><p class="eyebrow">BAKED FRESH IN PHNOM PENH</p><h1 id="hero-title">A little joy,<br><em>fresh from the oven.</em></h1><p class="hero-text">From flaky croissants to celebratory cakes, we make everyday moments taste worth remembering.</p><div class="hero-actions"><a class="button button-primary" href="./pages/menu.html">Explore the menu <span aria-hidden="true">&#8594;</span></a><a class="text-link" href="./pages/contact.html">Order for delivery</a></div><div class="hero-note"><span aria-hidden="true">&#10022;</span> Baked every morning, served with care</div></div><div class="hero-art" aria-label="Fresh chocolate pastry and baguette"><div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div><img class="hero-pastry" src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&amp;fit=crop&amp;w=700&amp;h=900&amp;q=85" alt="Chocolate pastry"><img class="hero-baguette" src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&amp;fit=crop&amp;w=700&amp;h=500&amp;q=85" alt="Fresh baguette"><div class="hero-stamp">MADE<br>WITH<br>LOVE</div></div></section>
+        <section class="home-section category-section" aria-labelledby="categories-title"><div class="section-heading"><div><p class="eyebrow">TAKE YOUR PICK</p><h2 id="categories-title">Something for every craving</h2></div><a class="text-link" href="./pages/menu.html">View all treats <span aria-hidden="true">&#8594;</span></a></div><div class="category-grid"><a class="category-tile category-drink" href="./pages/menu.html"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&amp;fit=crop&amp;w=700&amp;h=700&amp;q=85" alt="Drinks"><span>Drinks</span><small>Cool &amp; comforting</small></a><a class="category-tile category-cake" href="./pages/menu.html"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&amp;fit=crop&amp;w=700&amp;h=700&amp;q=85" alt="Cakes"><span>Cakes</span><small>Made to celebrate</small></a><a class="category-tile category-bread" href="./pages/menu.html"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=700&amp;h=700&amp;q=85" alt="Breads"><span>Breads</span><small>Golden and warm</small></a><a class="category-tile category-sandwich" href="./pages/menu.html"><img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&amp;fit=crop&amp;w=700&amp;h=700&amp;q=85" alt="Sandwiches"><span>Sandwiches</span><small>Freshly filled</small></a></div></section>
+        <section class="home-section popular-section" aria-labelledby="popular-title"><div class="section-heading"><div><p class="eyebrow">CUSTOMER FAVOURITES</p><h2 id="popular-title">The ones that disappear first</h2></div><p class="section-aside">Handpicked from today's counter</p></div><div class="bakery-grid"><a class="bakery-item" href="./pages/menu.html"><span class="item-image"><img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&amp;fit=crop&amp;w=700&amp;h=700&amp;q=85" alt="Baguette"></span><span class="item-info"><strong>Baguette</strong><small>Classic crust, soft centre</small><b>$2.50</b></span></a><a class="bakery-item" href="./pages/menu.html"><span class="item-image"><img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&amp;fit=crop&amp;w=700&amp;h=700&amp;q=85" alt="Chocolate pastry"></span><span class="item-info"><strong>Chocolate</strong><small>Rich, flaky, irresistible</small><b>$3.50</b></span></a><a class="bakery-item" href="./pages/menu.html"><span class="item-image"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=700&amp;h=700&amp;q=85" alt="Multigrain bread"></span><span class="item-info"><strong>Multigrain</strong><small>Wholesome and hearty</small><b>$2.40</b></span></a><a class="bakery-item" href="./pages/menu.html"><span class="item-image"><img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&amp;fit=crop&amp;w=700&amp;h=700&amp;q=85" alt="Strawberry drink"></span><span class="item-info"><strong>Strawberry</strong><small>Bright, creamy, chilled</small><b>$1.50</b></span></a></div></section>
+        <section class="visit-strip" aria-labelledby="visit-title"><div><p class="eyebrow">COME SAY HELLO</p><h2 id="visit-title">Your new favourite corner of the city.</h2></div><div class="visit-details"><p><strong>Open daily</strong><br>Mon-Sat 7:00 AM-9:00 PM<br>Sun 8:00 AM-7:00 PM</p><a class="button button-light" href="./pages/contact.html">Find us in Phnom Penh</a></div></section>
+    </main>
+    <footer class="site-footer"><div><a class="footer-brand" href="index.html">Cakery Charm</a><p>Fresh, delicious treats baked daily.<br>Made for slow mornings and sweet celebrations.</p></div><div><h2>Say hello</h2><a href="tel:123456789">123-456-789</a><a href="mailto:cakerycharm@gmail.com">cakerycharm@gmail.com</a></div><div><h2>Follow along</h2><a href="#">Instagram</a><a href="#">Facebook</a></div></footer>
 </body>
 </html>
