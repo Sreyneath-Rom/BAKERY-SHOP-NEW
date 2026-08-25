@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order status | Cakery Charm</title>
+  <meta name="description" content="Track your Cakery Charm order.">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/flow.css">
+</head>
+<body>
+  <nav class="site-nav"><a class="nav-left" href="../index.html" aria-label="Cakery Charm home"><img class="logo" src="../images/logo.png" alt=""><span>Cakery Charm</span></a><div class="nav-right"><ul><li><a href="../index.html">Home</a></li><li><a href="menu.html">Menu</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a class="cart-button" href="menu.html" aria-label="Return to menu"><span aria-hidden="true">&#128722;</span><strong>0</strong></a></li></ul></div></nav>
+  <main class="order-page"><section class="order-success"><div class="success-mark" aria-hidden="true">&#10003;</div><p class="eyebrow">ORDER CONFIRMED</p><h1>We are baking happiness.</h1><p>Your order <strong id="order-id">...</strong> is on its way through our kitchen.</p><div class="order-tracker"><div class="status-progress"></div><div class="status-step"><span>01</span><strong>Order received</strong></div><div class="status-step"><span>02</span><strong>Payment confirmed</strong></div><div class="status-step is-current"><span>03</span><strong id="order-status">Preparing your order</strong></div><div class="status-step"><span>04</span><strong>Baking</strong></div><div class="status-step"><span>05</span><strong>Ready for pickup</strong></div></div><p class="ready-note">Estimated ready time<br><strong>25-35 minutes</strong></p><div class="order-actions"><a class="button button-primary" href="menu.html">Order again <span aria-hidden="true">&#8594;</span></a><button class="button button-quiet" id="cancel-order" type="button">Cancel order</button></div><p class="order-message" role="status" aria-live="polite"></p><details class="order-history"><summary>View order summary</summary><div id="order-items"></div></details></section></main>
+  <footer class="site-footer"><div><a class="footer-brand" href="../index.html">Cakery Charm</a><p>Fresh, delicious treats baked daily.<br>Made for slow mornings and sweet celebrations.</p></div><div><h2>Say hello</h2><a href="tel:123456789">123-456-789</a><a href="mailto:cakerycharm@gmail.com">cakerycharm@gmail.com</a></div><div><h2>Follow along</h2><a href="https://instagram.com" rel="noreferrer">Instagram</a><a href="https://facebook.com" rel="noreferrer">Facebook</a></div></footer>
+  <script type="module" src="../js/order.js"></script>
+</body>
+</html>

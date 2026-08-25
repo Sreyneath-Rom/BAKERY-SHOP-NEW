@@ -1,0 +1,1 @@
+.product-card { @include glass-panel; overflow: hidden; transition: transform .25s ease, box-shadow .25s ease; &:hover { transform: translateY(-5px); } }

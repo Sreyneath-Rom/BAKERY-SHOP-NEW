@@ -1,0 +1,7 @@
+@mixin glass-panel($radius: 16px) {
+  border: 1px solid rgba(255, 255, 255, .85);
+  border-radius: $radius;
+  background: $glass;
+  box-shadow: $shadow;
+  backdrop-filter: blur(18px);
+}

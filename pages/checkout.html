@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | Cakery Charm</title>
+  <meta name="description" content="Complete your Cakery Charm order.">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/flow.css">
+</head>
+<body>
+  <nav class="site-nav"><a class="nav-left" href="../index.html" aria-label="Cakery Charm home"><img class="logo" src="../images/logo.png" alt=""><span>Cakery Charm</span></a><div class="nav-right"><ul><li><a href="../index.html">Home</a></li><li><a href="menu.html">Menu</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a class="cart-button" href="checkout.html" aria-label="Current checkout"><span aria-hidden="true">&#128722;</span><strong>0</strong></a></li></ul></div></nav>
+  <main class="checkout-page">
+    <section class="checkout-intro"><p class="eyebrow">ALMOST THERE</p><h1>Complete your order.</h1><p>Tell us where to bring the good stuff. This is a frontend checkout simulation.</p><ol class="checkout-steps"><li class="is-active"><span>01</span>Cart</li><li><span>02</span>Customer</li><li><span>03</span>Delivery</li><li><span>04</span>Confirm</li></ol></section>
+    <div class="checkout-layout"><form class="checkout-form" id="checkout-form"><h2>Your details</h2><label for="checkout-name">Full name</label><input id="checkout-name" name="name" type="text" autocomplete="name" required placeholder="Your name"><label for="checkout-phone">Phone</label><input id="checkout-phone" name="phone" type="tel" autocomplete="tel" required placeholder="Your phone number"><label for="checkout-email">Email</label><input id="checkout-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"><fieldset><legend>How should we get it to you?</legend><label><input name="fulfillment" type="radio" value="delivery" checked> Delivery</label><label><input name="fulfillment" type="radio" value="pickup"> Pickup</label></fieldset><label for="checkout-address">Address or pickup note</label><textarea id="checkout-address" name="address" required placeholder="Street, landmark, or pickup note"></textarea><fieldset><legend>Payment</legend><label><input name="payment" type="radio" value="cash" checked> Cash on delivery</label><label><input name="payment" type="radio" value="card"> Card on pickup</label></fieldset><label for="checkout-notes">Order notes <span class="optional">optional</span></label><textarea id="checkout-notes" name="notes" placeholder="Add a message for our bakers"></textarea><button class="button button-primary" type="submit">Place order <span aria-hidden="true">&#8594;</span></button><p class="checkout-loading" role="status" aria-live="polite"></p></form><aside class="checkout-summary"><p class="eyebrow">YOUR BASKET</p><h2>Order summary</h2><div id="checkout-summary"></div><div class="checkout-delivery"><span>Delivery</span><strong>$3.00</strong></div><div class="order-total"><span>Total</span><strong id="checkout-total">$0.00</strong></div></aside></div>
+  </main>
+  <footer class="site-footer"><div><a class="footer-brand" href="../index.html">Cakery Charm</a><p>Fresh, delicious treats baked daily.<br>Made for slow mornings and sweet celebrations.</p></div><div><h2>Say hello</h2><a href="tel:123456789">123-456-789</a><a href="mailto:cakerycharm@gmail.com">cakerycharm@gmail.com</a></div><div><h2>Follow along</h2><a href="https://instagram.com" rel="noreferrer">Instagram</a><a href="https://facebook.com" rel="noreferrer">Facebook</a></div></footer>
+  <script type="module" src="../js/checkout.js"></script>
+</body>
+</html>

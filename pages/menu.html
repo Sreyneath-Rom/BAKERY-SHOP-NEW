@@ -21,12 +21,14 @@
                 <li><a class="active" href="menu.html" aria-current="page">Menu</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a class="cart-button" href="contact.html" aria-label="Go to delivery order"><span aria-hidden="true">&#128722;</span></a></li>
+                <li><button class="cart-button" type="button" aria-label="Open order summary" aria-controls="order-summary"><span aria-hidden="true">&#128722;</span><strong id="cart-count">0</strong></button></li>
  
             </ul>
         </div>
     </nav>
     <div class="menu">
+        <div class="menu-intro"><p class="eyebrow">FRESH FROM THE COUNTER</p><h1>Find your next favourite.</h1><p>Browse the Cakery Charm collection, then open any treat for a closer look.</p></div>
+        <div class="menu-tools"><label class="menu-search" for="product-search">Search the menu <input id="product-search" type="search" placeholder="Try croissant or coffee"></label><label class="menu-sort" for="product-sort">Sort by <select id="product-sort"><option value="featured">Featured</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="rating">Top rated</option></select></label></div><div class="menu-filters" role="group" aria-label="Filter menu by category"><button class="filter-button is-active" type="button" data-filter="all">All</button><button class="filter-button" type="button" data-filter="cake">Cakes</button><button class="filter-button" type="button" data-filter="pastry">Pastries</button><button class="filter-button" type="button" data-filter="bread">Breads</button><button class="filter-button" type="button" data-filter="sandwich">Sandwiches</button><button class="filter-button" type="button" data-filter="drink">Drinks</button></div>
         <h2>Bread</h2>
         <p class="description">Bread, whether homemade or store-bought, is loved and essential everywhere.</p>
         <div class="grid">
@@ -164,11 +166,26 @@
             </div>
         </div>
     </div>
+    <aside class="order-summary" id="order-summary" aria-label="Order summary" aria-hidden="true"><div class="order-head"><h2>Your cart</h2><button class="close-order" type="button" aria-label="Close order summary">&#10005;</button></div><div class="order-items"><p class="empty-order">Your order is waiting for something warm.</p></div><div class="order-breakdown"><div><span>Subtotal</span><strong>$<span id="cart-subtotal">0.00</span></strong></div><div><span>Delivery</span><strong>$<span id="cart-delivery">3.00</span></strong></div><div class="order-total"><span>Total</span><strong>$<span id="cart-total">0.00</span></strong></div></div><a class="button button-primary checkout-button" href="checkout.html">Proceed to checkout <span aria-hidden="true">&#8594;</span></a></aside>
+    <div class="order-toast" role="status" aria-live="polite"></div>
+    <div class="product-modal" id="product-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-name">
+        <div class="product-sheet">
+            <button class="modal-close" type="button" aria-label="Close product details">&#10005;</button>
+            <img id="modal-image" src="" alt="">
+            <p class="eyebrow">FRESH FROM OUR KITCHEN</p>
+            <h2 id="modal-name"></h2>
+            <p id="modal-description"></p>
+            <div class="modal-options"><fieldset><legend>Size</legend><label><input name="size" type="radio" value="6&quot;"> 6&quot;</label><label><input name="size" type="radio" value="8&quot;" checked> 8&quot;</label><label><input name="size" type="radio" value="10&quot;"> 10&quot;</label></fieldset><div class="modal-order"><label for="modal-quantity">Quantity</label><button class="quantity-step" id="quantity-minus" type="button" aria-label="Decrease quantity">&#8722;</button><input id="modal-quantity" type="number" min="1" max="10" value="1"><button class="quantity-step" id="quantity-plus" type="button" aria-label="Increase quantity">&#43;</button><strong id="modal-price"></strong></div></div>
+            <button class="button button-primary" id="modal-add" type="button">Add to cart <span aria-hidden="true">&#8594;</span></button>
+        </div>
+    </div>
     <footer class="site-footer">
         <div><a class="footer-brand" href="../index.html">Cakery Charm</a><p>Fresh, delicious treats baked daily.<br>Made for slow mornings and sweet celebrations.</p></div>
         <div><h2>Say hello</h2><a href="tel:123456789">123-456-789</a><a href="mailto:cakerycharm@gmail.com">cakerycharm@gmail.com</a></div>
         <div><h2>Follow along</h2><a href="https://instagram.com" rel="noreferrer">Instagram</a><a href="https://facebook.com" rel="noreferrer">Facebook</a></div>
     </footer>
+    <script src="../js/menu.js" defer></script>
+    <script type="module" src="../js/app.js"></script>
 </body>
 
 </html>
