@@ -4,55 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cakery Charm</title>
+    <title>Contact | Cakery Charm</title>
+    <meta name="description" content="Contact Cakery Charm for delivery, feedback, and bakery location details.">
     <link rel="stylesheet" href="../css/main.css">
 </head>
 
 <body>
-    <nav>
-        <div class="nav-left">
+    <nav class="site-nav">
+        <a class="nav-left" href="../index.html" aria-label="Cakery Charm home">
             <img class="logo" src="../images/logo.png" alt="Cakery Charm Logo">
             <span>Cakery Charm</span>
-        </div>
+        </a>
         <div class="nav-right">
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a class="active" href="contact.html" aria-current="page">Contact</a></li>
+                <li><a class="cart-button" href="contact.html" aria-label="Current delivery order"><span aria-hidden="true">&#128722;</span></a></li>
   
             </ul>
         </div>
     </nav>
     <div class="main-container">
-        <form class="delivery-form" action="#">
+        <form class="delivery-form" action="mailto:cakerycharm@gmail.com" method="post" enctype="text/plain">
             <h3>Delivery</h3>
             <div class="name">
                 <div class="first">
-                    <label for="fname">First name</label><br>
-                    <input type="text" placeholder="First Name"><br>
+                    <label for="fname">First name</label>
+                    <input id="fname" name="first_name" type="text" placeholder="First name" autocomplete="given-name" required>
                 </div>
                 <div class="last">
-                    <label for="lname">Last name</label><br>
-                    <input type="text" placeholder="Last Name"><br>
+                    <label for="lname">Last name</label>
+                    <input id="lname" name="last_name" type="text" placeholder="Last name" autocomplete="family-name" required>
                 </div>
             </div>
             <div class="num">
                 <div class="phone">
-                    <label for="pnumber">Phone Number</label><br>
-                    <input type="text" placeholder="Phone Number">
+                    <label for="pnumber">Phone number</label>
+                    <input id="pnumber" name="phone" type="tel" placeholder="Phone number" autocomplete="tel" required>
                 </div>
                 <div class="location">
-                    <label for="lcation">Location</label><br>
-                    <input type="text" placeholder="Location">
+                    <label for="location">Delivery location</label>
+                    <input id="location" name="location" type="text" placeholder="Delivery location" autocomplete="street-address" required>
                 </div>
             </div>
             <p>Number of cakes</p>
             <div class="box">
-                <label><input type="checkbox"> 1 cake</label>
-                <label><input type="checkbox"> 2 cakes</label>
-                <label><input type="checkbox"> 3 cakes</label>
-                <label><input type="checkbox"> 4 cakes</label>
+                <label><input name="quantity" type="radio" value="1" required> 1 cake</label>
+                <label><input name="quantity" type="radio" value="2"> 2 cakes</label>
+                <label><input name="quantity" type="radio" value="3"> 3 cakes</label>
+                <label><input name="quantity" type="radio" value="4"> 4 cakes</label>
 
             </div>
             <button class="submit-btn">Submit</button>
@@ -60,78 +62,42 @@
     </div>
     <div class="delivery-icon">
         <div class="icon-left">
-            <img src="../images/icon/icon.png" alt="">
+            <img src="../images/logo.png" alt="">
             <h3>Quick and refreshing with delicious cakes and drinks</h3>
         </div>
         <div class="icon-right">
-            <img src="../images/google-icon/playstore.png" alt="">
-            <img src="../images/google-icon/appstore.png" alt="">
+            <a class="button button-primary" href="../pages/menu.html">Browse the menu <span aria-hidden="true">&#8594;</span></a>
         </div>
     </div>
     <div class="feedback-location">
         <h2>Feedback and Location</h2>
         <div class="feedback-container">
-            <div class="feedback-form">
+                <form class="feedback-form" action="mailto:cakerycharm@gmail.com" method="post" enctype="text/plain">
                 <h3>Feedback</h3>
                 <div class="email">
-                    <label for="email">Email</label><br>
-                    <input type="email" placeholder="Email">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="Email" autocomplete="email" required>
                 </div>
                 <div class="feedback">
-                    <label for="feedback">Your feedback</label><br>
-                    <textarea placeholder="Your feedback"></textarea>
+                    <label for="feedback">Your feedback</label>
+                    <textarea id="feedback" name="feedback" placeholder="Tell us about your visit" required></textarea>
                 </div>
-                <button type="submit">Submit</button>
+                <button type="submit">Send feedback</button>
+                </form>
             </div>
             <div class="location-map">
                 <h3>Location</h3>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3909.013908327777!2d104.88050867324293!3d11.550859788648934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951add5e2cd81%3A0x171e0b69c7c6f7ba!2sPasserelles%20num%C3%A9riques%20Cambodia%20(PNC)!5e0!3m2!1sen!2skh!4v1730357899196!5m2!1sen!2skh"width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy"referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe title="Cakery Charm location map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3909.013908327777!2d104.88050867324293!3d11.550859788648934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951add5e2cd81%3A0x171e0b69c7c6f7ba!2sPasserelles%20num%C3%A9riques%20Cambodia%20(PNC)!5e0!3m2!1sen!2skh!4v1730357899196!5m2!1sen!2skh" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
         </div>
 
         
     </div>
-    <footer>
-        <div class="footer-section about-us">
-            <h2>About Us</h2>
-            <p>Where fresh, delicious treats are baked daily. We specialize in artisan bread and pastries, using only
-                the finest ingredients to ensure every bite is perfect.</p>
-            <h2>Open Hours</h2>
-            <p>Monday-Saturday:7:00 AM-9:00 PM</p>
-            <p>Sunday: 8:00 AM - 7:00 PM</p>
-        </div>
-        <div class="footer-section contact-us">
-            <h2>Contact Us</h2>
-            <div class="icon">
-                <img src="../images/icon/i-tp.png" alt="">
-                <p>123-456-789</p>
-            </div>
-            <div class="icon">
-                <img src="../images/icon/i-map.png" alt="">
-                <p>Phnom Penh</p>
-            </div>
-            <div class="icon">
-                <img src="../images/icon/i-em.png" alt="">
-                <p>cakerycharm@gmail.com</p>
-            </div>
-
-        </div>
-        <div class="footer-section social-media">
-            <h2>Social Media</h2>
-            <div class="icon">
-                <img src="../images/icon/i-fb.png" alt="">
-                <p>cakerycharm</p>
-            </div>
-            <div class="icon">
-                <img src="../images/icon/i-ig.png" alt="">
-                <p>cakerycharm</p>
-            </div>
-            <div class="icon">
-                <img src="../images/icon/i-wa.png" alt="">
-                <p>cakerycharm</p>
-            </div>
-        </div>
+    <footer class="site-footer">
+        <div><a class="footer-brand" href="../index.html">Cakery Charm</a><p>Fresh, delicious treats baked daily.<br>Made for slow mornings and sweet celebrations.</p></div>
+        <div><h2>Say hello</h2><a href="tel:123456789">123-456-789</a><a href="mailto:cakerycharm@gmail.com">cakerycharm@gmail.com</a></div>
+        <div><h2>Follow along</h2><a href="https://instagram.com" rel="noreferrer">Instagram</a><a href="https://facebook.com" rel="noreferrer">Facebook</a></div>
     </footer>
 </body>
 

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -20,6 +22,7 @@ body { min-width: 320px; color: var(--ink); background: var(--paper); background
 nav { position: sticky; top: 0; z-index: 10; padding: 14px max(22px, calc((100% - 1180px) / 2)); border-bottom: 1px solid var(--line); background: rgba(255,250,244,.82); backdrop-filter: blur(22px) saturate(150%); }
 nav .nav-left { color: var(--ink); font-size: 19px; font-weight: 800; text-decoration: none; } nav .nav-left .logo { width: 42px; height: 42px; object-fit: contain; }
 nav .nav-right ul { gap: 28px; margin-right: 0; } nav .nav-right ul li { margin-left: 0; } nav .nav-right ul li a { color: var(--muted); font-size: 11px; letter-spacing: 1.2px; }
+.cart-button { display: grid !important; width: 36px; height: 36px; padding: 0; border: 1px solid rgba(35,109,104,.2); border-radius: 50%; color: var(--teal) !important; background: rgba(255,255,255,.65); place-items: center; }.cart-button::after { display: none !important; }.cart-button span { font-size: 15px; }
 .container, .main, .group-icon, .knowlage, .text, .bread { max-width: 1180px; margin: auto; }
 .container { display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 50px; padding: 80px 30px 55px; }
 .container .images img { width: 100%; height: 520px; border-radius: 18px; object-fit: cover; box-shadow: var(--shadow); }

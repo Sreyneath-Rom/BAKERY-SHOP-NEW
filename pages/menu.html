@@ -4,22 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cakery Charm</title>
+    <title>Menu | Cakery Charm</title>
+    <meta name="description" content="Browse fresh breads, cakes, sandwiches, and drinks from Cakery Charm.">
     <link rel="stylesheet" href="../css/main.css">
 </head>
 
 <body>
-    <nav>
-        <div class="nav-left">
+    <nav class="site-nav">
+        <a class="nav-left" href="../index.html" aria-label="Cakery Charm home">
             <img class="logo" src="../images/logo.png" alt="Cakery Charm Logo">
             <span>Cakery Charm</span>
-        </div>
+        </a>
         <div class="nav-right">
             <ul>
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="#">Menu</a></li>
+                <li><a class="active" href="menu.html" aria-current="page">Menu</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a class="cart-button" href="contact.html" aria-label="Go to delivery order"><span aria-hidden="true">&#128722;</span></a></li>
  
             </ul>
         </div>
@@ -162,46 +164,10 @@
             </div>
         </div>
     </div>
-    <footer>
-        <div class="footer-section about-us">
-            <h2>About Us</h2>
-            <p>Where fresh, delicious treats are baked daily. We specialize in artisan bread and pastries, using only
-                the finest ingredients to ensure every bite is perfect.</p>
-            <h2>Open Hours</h2>
-            <p>Monday-Saturday:7:00 AM-9:00 PM</p>
-            <p>Sunday: 8:00 AM - 7:00 PM</p>
-        </div>
-        <div class="footer-section contact-us">
-            <h2>Contact Us</h2>
-            <div class="icon">
-                <img src="../images/icon/i-tp.png" alt="">
-                <p>123-456-789</p>
-            </div>
-            <div class="icon">
-                <img src="../images/icon/i-map.png" alt="">
-                <p>Phnom Penh</p>
-            </div>
-            <div class="icon">
-                <img src="../images/icon/i-em.png" alt="">
-                <p>cakerycharm@gmail.com</p>
-            </div>
-
-        </div>
-        <div class="footer-section social-media">
-            <h2>Social Media</h2>
-            <div class="icon">
-                <img src="../images/icon/i-fb.png" alt="">
-                <p>cakerycharm</p>
-            </div>
-            <div class="icon">
-                <img src="../images/icon/i-ig.png" alt="">
-                <p>cakerycharm</p>
-            </div>
-            <div class="icon">
-                <img src="../images/icon/i-wa.png" alt="">
-                <p>cakerycharm</p>
-            </div>
-        </div>
+    <footer class="site-footer">
+        <div><a class="footer-brand" href="../index.html">Cakery Charm</a><p>Fresh, delicious treats baked daily.<br>Made for slow mornings and sweet celebrations.</p></div>
+        <div><h2>Say hello</h2><a href="tel:123456789">123-456-789</a><a href="mailto:cakerycharm@gmail.com">cakerycharm@gmail.com</a></div>
+        <div><h2>Follow along</h2><a href="https://instagram.com" rel="noreferrer">Instagram</a><a href="https://facebook.com" rel="noreferrer">Facebook</a></div>
     </footer>
 </body>
 
