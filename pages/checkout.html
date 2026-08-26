@@ -7,14 +7,324 @@
   <meta name="description" content="Complete your Cakery Charm order.">
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/flow.css">
+  <link rel="stylesheet" href="../css/header-footer.css">
 </head>
 <body>
-  <nav class="site-nav"><a class="nav-left" href="../index.html" aria-label="Cakery Charm home"><img class="logo" src="../images/logo.png" alt=""><span>Cakery Charm</span></a><div class="nav-right"><ul><li><a href="../index.html">Home</a></li><li><a href="menu.html">Menu</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a class="cart-button" href="checkout.html" aria-label="Current checkout"><span aria-hidden="true">&#128722;</span><strong>0</strong></a></li></ul></div></nav>
+  <div class="page-loader" aria-label="Loading Cakery Charm"><div class="loader-mark"><img src="../images/logo.png" alt=""><span>Cakery Charm</span><small>baking happiness...</small><i></i></div></div>
+
+  <!-- Top Announcement Bar -->
+  <div class="site-topbar">
+      <div class="topbar-highlight">
+          <span class="topbar-badge">Fresh Batch</span>
+          <span>Warm ovens every morning at 7:00 AM • Free mini pastry on orders over $15</span>
+      </div>
+      <div class="topbar-info">
+          <span>📍 Boeung Tumpun, Phnom Penh</span>
+          <span>⏰ 7:00 AM – 9:00 PM</span>
+          <span>📞 <a href="tel:123456789">123-456-789</a></span>
+      </div>
+  </div>
+
+  <!-- Main Header Navigation -->
+  <header class="site-header">
+      <div class="header-inner">
+          <a class="brand-link" href="../index.html" aria-label="Cakery Charm Bakehouse">
+              <div class="brand-logo-wrap">
+                  <img src="../images/logo.png" alt="Cakery Charm Logo">
+              </div>
+              <div class="brand-text">
+                  <span class="brand-title">Cakery Charm</span>
+                  <span class="brand-subtitle">Artisan Bakehouse &amp; Cafe</span>
+              </div>
+          </a>
+
+          <nav class="nav-links-wrap" aria-label="Main Navigation">
+              <ul class="nav-list">
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="menu.html">Menu <span class="nav-badge-new">Fresh</span></a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+              </ul>
+          </nav>
+
+          <div class="header-actions">
+              <a class="header-cta" href="menu.html">Back to Menu <span aria-hidden="true">&rarr;</span></a>
+              <a class="header-cart-btn cart-button is-active" href="checkout.html" aria-label="Current checkout">
+                  <svg class="cart-icon-svg" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                  <span class="cart-badge-count" id="cart-count">0</span>
+              </a>
+              <button class="mobile-toggle-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+                  <span></span>
+              </button>
+          </div>
+      </div>
+  </header>
   <main class="checkout-page">
-    <section class="checkout-intro"><p class="eyebrow">ALMOST THERE</p><h1>Complete your order.</h1><p>Tell us where to bring the good stuff. This is a frontend checkout simulation.</p><ol class="checkout-steps"><li class="is-active"><span>01</span>Cart</li><li><span>02</span>Customer</li><li><span>03</span>Delivery</li><li><span>04</span>Confirm</li></ol></section>
-    <div class="checkout-layout"><form class="checkout-form" id="checkout-form"><h2>Your details</h2><label for="checkout-name">Full name</label><input id="checkout-name" name="name" type="text" autocomplete="name" required placeholder="Your name"><label for="checkout-phone">Phone</label><input id="checkout-phone" name="phone" type="tel" autocomplete="tel" required placeholder="Your phone number"><label for="checkout-email">Email</label><input id="checkout-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"><fieldset><legend>How should we get it to you?</legend><label><input name="fulfillment" type="radio" value="delivery" checked> Delivery</label><label><input name="fulfillment" type="radio" value="pickup"> Pickup</label></fieldset><label for="checkout-address">Address or pickup note</label><textarea id="checkout-address" name="address" required placeholder="Street, landmark, or pickup note"></textarea><fieldset><legend>Payment</legend><label><input name="payment" type="radio" value="cash" checked> Cash on delivery</label><label><input name="payment" type="radio" value="card"> Card on pickup</label></fieldset><label for="checkout-notes">Order notes <span class="optional">optional</span></label><textarea id="checkout-notes" name="notes" placeholder="Add a message for our bakers"></textarea><button class="button button-primary" type="submit">Place order <span aria-hidden="true">&#8594;</span></button><p class="checkout-loading" role="status" aria-live="polite"></p></form><aside class="checkout-summary"><p class="eyebrow">YOUR BASKET</p><h2>Order summary</h2><div id="checkout-summary"></div><div class="checkout-delivery"><span>Delivery</span><strong>$3.00</strong></div><div class="order-total"><span>Total</span><strong id="checkout-total">$0.00</strong></div></aside></div>
+    <section class="checkout-intro reveal-on-scroll">
+      <p class="eyebrow">SAFE &amp; SECURE CHECKOUT</p>
+      <h1>Complete your artisan order.</h1>
+      <p>Every loaf and pastry is baked in small morning batches. Tell us where to deliver or when you'll pick up.</p>
+      <ol class="checkout-steps">
+        <li class="is-complete"><span>&#10003;</span>1. Cart</li>
+        <li class="is-active"><span>02</span>2. Details</li>
+        <li><span>03</span>3. Delivery</li>
+        <li><span>04</span>4. Receipt</li>
+      </ol>
+    </section>
+
+    <div class="checkout-layout reveal-on-scroll">
+      <!-- Checkout Form -->
+      <form class="checkout-form" id="checkout-form">
+        <div class="form-section-header">
+          <h2>1. Contact &amp; Delivery Details</h2>
+          <span class="secure-tag">🔒 256-bit Encrypted</span>
+        </div>
+
+        <div class="checkout-fields-grid">
+          <div class="form-group">
+            <label for="checkout-name">Full name</label>
+            <input id="checkout-name" name="name" type="text" autocomplete="name" required placeholder="e.g. Somaly Tep">
+          </div>
+          <div class="form-group">
+            <label for="checkout-phone">Phone number</label>
+            <input id="checkout-phone" name="phone" type="tel" autocomplete="tel" required placeholder="e.g. 012 345 678">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="checkout-email">Email address</label>
+          <input id="checkout-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+        </div>
+
+        <!-- Fulfillment Switcher Card -->
+        <div class="checkout-options-box">
+          <label class="section-sublabel">2. Choose Fulfillment Method</label>
+          <div class="fulfillment-pill-group">
+            <label class="fulfillment-option">
+              <input name="fulfillment" type="radio" value="delivery" checked>
+              <div class="option-content">
+                <strong>🛵 Express Delivery</strong>
+                <span>Phnom Penh 30-45 mins (+$3.00)</span>
+              </div>
+            </label>
+            <label class="fulfillment-option">
+              <input name="fulfillment" type="radio" value="pickup">
+              <div class="option-content">
+                <strong>🛍️ Counter Pickup</strong>
+                <span>Boeung Tumpun Bakehouse (FREE)</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group" id="address-field-group">
+          <label for="checkout-address">Delivery Street Address / Sangkat / Notes</label>
+          <textarea id="checkout-address" name="address" required placeholder="e.g. St 371, House 24B, near PNC Campus, Phnom Penh"></textarea>
+        </div>
+
+        <!-- Tip Selector -->
+        <div class="checkout-options-box">
+          <label class="section-sublabel">3. Baker Appreciation Tip</label>
+          <p class="sub-helper">100% goes directly to our morning baking &amp; packaging team.</p>
+          <div class="tip-pills-row">
+            <button class="tip-pill is-active" type="button" data-tip="0">$0</button>
+            <button class="tip-pill" type="button" data-tip="1">$1.00</button>
+            <button class="tip-pill" type="button" data-tip="2">$2.00</button>
+            <button class="tip-pill" type="button" data-tip="3">$3.00</button>
+            <button class="tip-pill" type="button" data-tip="5">$5.00</button>
+          </div>
+        </div>
+
+        <!-- Payment Method -->
+        <div class="checkout-options-box">
+          <label class="section-sublabel">4. Payment Method</label>
+          <div class="fulfillment-pill-group">
+            <label class="fulfillment-option">
+              <input name="payment" type="radio" value="cash" checked>
+              <div class="option-content">
+                <strong>💵 Cash / ABA QR on Delivery</strong>
+                <span>Pay when your pastries arrive</span>
+              </div>
+            </label>
+            <label class="fulfillment-option">
+              <input name="payment" type="radio" value="card">
+              <div class="option-content">
+                <strong>💳 Card / Counter Payment</strong>
+                <span>Visa, Mastercard &amp; Bakong KHQR</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="checkout-notes">Baker instructions &amp; custom note <span class="optional">(optional)</span></label>
+          <textarea id="checkout-notes" name="notes" placeholder="e.g. Please slice sourdough bread. Add festive ribbon."></textarea>
+        </div>
+
+        <button class="button button-primary checkout-submit-btn" type="submit">
+          <span>Place Order Now</span>
+          <span aria-hidden="true">&rarr;</span>
+        </button>
+        <p class="checkout-loading" role="status" aria-live="polite"></p>
+      </form>
+
+      <!-- Order Summary Aside -->
+      <aside class="checkout-summary">
+        <div class="summary-header">
+          <span class="eyebrow">YOUR FRESH BASKET</span>
+          <h2>Order Summary</h2>
+        </div>
+
+        <div id="checkout-summary" class="checkout-items-list"></div>
+
+        <!-- Promo Code Input Group -->
+        <div class="promo-code-card">
+          <label for="promo-input">Have a Promo Coupon?</label>
+          <div class="promo-input-row">
+            <input id="promo-input" type="text" placeholder="e.g. SWEET10" uppercase>
+            <button class="button button-light promo-apply-btn" type="button" id="apply-promo-btn">Apply</button>
+          </div>
+          <div class="promo-quick-hints">
+            <span>Try:</span>
+            <button type="button" class="promo-chip" data-code="SWEET10">SWEET10 (-10%)</button>
+            <button type="button" class="promo-chip" data-code="FREESHIP">FREESHIP (Free Delivery)</button>
+          </div>
+          <p class="promo-message" id="promo-message" role="status" aria-live="polite"></p>
+        </div>
+
+        <!-- Financial Breakdown -->
+        <div class="checkout-breakdown-box">
+          <div class="breakdown-row">
+            <span>Subtotal</span>
+            <strong id="checkout-subtotal">$0.00</strong>
+          </div>
+          <div class="checkout-delivery breakdown-row">
+            <span>Delivery Fee</span>
+            <strong id="checkout-delivery-fee">$3.00</strong>
+          </div>
+          <div class="breakdown-row checkout-tip-row" id="checkout-tip-row" style="display:none;">
+            <span>Baker Tip</span>
+            <strong id="checkout-tip-val">$0.00</strong>
+          </div>
+          <div class="breakdown-row checkout-discount-row" id="checkout-discount-row" style="display:none;">
+            <span>Discount</span>
+            <strong id="checkout-discount-val" style="color:var(--teal);">-$0.00</strong>
+          </div>
+          <div class="order-total breakdown-row">
+            <span>Total to Pay</span>
+            <strong id="checkout-total">$0.00</strong>
+          </div>
+        </div>
+
+        <div class="guarantee-box">
+          <span>🌿 Baked fresh at 7:00 AM • 100% French Butter Guarantee</span>
+        </div>
+      </aside>
+    </div>
   </main>
-  <footer class="site-footer"><div><a class="footer-brand" href="../index.html">Cakery Charm</a><p>Fresh, delicious treats baked daily.<br>Made for slow mornings and sweet celebrations.</p></div><div><h2>Say hello</h2><a href="tel:123456789">123-456-789</a><a href="mailto:cakerycharm@gmail.com">cakerycharm@gmail.com</a></div><div><h2>Follow along</h2><a href="https://instagram.com" rel="noreferrer">Instagram</a><a href="https://facebook.com" rel="noreferrer">Facebook</a></div></footer>
+  <footer class="site-footer-wrapper">
+      <div class="site-footer-container">
+          <!-- Newsletter Club Invitation -->
+          <div class="footer-newsletter-box reveal-on-scroll">
+              <div class="footer-newsletter-text">
+                  <span class="footer-newsletter-tag">✨ Join The Cakery Circle</span>
+                  <h2 class="footer-newsletter-title">Slow mornings, sweet treats.</h2>
+                  <p class="footer-newsletter-desc">Subscribe to receive weekend secret recipes, morning warm bread alerts, and 10% off your next order.</p>
+              </div>
+              <form class="footer-newsletter-form" id="footer-newsletter-form">
+                  <input class="footer-newsletter-input" id="footer-newsletter-email" type="email" placeholder="Enter your email address..." required aria-label="Your email address">
+                  <button class="footer-newsletter-btn" type="submit">Join Club &rarr;</button>
+                  <p class="newsletter-status-msg" id="newsletter-status-msg" role="status" aria-live="polite"></p>
+              </form>
+          </div>
+
+          <!-- Footer Main Grid -->
+          <div class="footer-main-grid">
+              <!-- Column 1: Brand & Heritage -->
+              <div class="footer-brand-col">
+                  <a class="footer-brand-header" href="../index.html">
+                      <img class="footer-brand-logo" src="../images/logo.png" alt="Cakery Charm Logo">
+                      <div>
+                          <span class="footer-brand-name">Cakery Charm</span>
+                          <span class="footer-brand-tag">Artisan Bakehouse &amp; Cafe</span>
+                      </div>
+                  </a>
+                  <p class="footer-bio">A warm neighborhood bakery crafted for slow mornings, sweet celebrations, and freshly brewed coffees in Phnom Penh.</p>
+                  <div class="footer-badges-list">
+                      <span class="footer-badge-pill">🥐 Daily Small Batch</span>
+                      <span class="footer-badge-pill">🧈 100% French Butter</span>
+                      <span class="footer-badge-pill">☕ Specialty Roast</span>
+                  </div>
+              </div>
+
+              <!-- Column 2: Explore Navigation -->
+              <div class="footer-nav-col">
+                  <h3 class="footer-col-title">Explore</h3>
+                  <ul class="footer-links-list">
+                      <li><a href="../index.html">Home</a></li>
+                      <li><a href="menu.html">Artisan Menu</a></li>
+                      <li><a href="about.html">Our Story</a></li>
+                      <li><a href="contact.html">Custom Cakes</a></li>
+                      <li><a href="checkout.html">Quick Checkout</a></li>
+                  </ul>
+              </div>
+
+              <!-- Column 3: Hours & Location -->
+              <div class="footer-info-col">
+                  <h3 class="footer-col-title">Visit Bakehouse</h3>
+                  <ul class="footer-info-list">
+                      <li>
+                          <span class="info-icon">📍</span>
+                          <span>Street 371, Boeung Tumpun, Phnom Penh, Cambodia</span>
+                      </li>
+                      <li>
+                          <span class="info-icon">⏰</span>
+                          <span>Mon – Sat: 7:00 AM – 9:00 PM<br>Sun: 8:00 AM – 7:00 PM</span>
+                      </li>
+                      <li>
+                          <span class="info-icon">📞</span>
+                          <a href="tel:123456789">+855 12 345 678</a>
+                      </li>
+                      <li>
+                          <span class="info-icon">✉️</span>
+                          <a href="mailto:cakerycharm@gmail.com">cakerycharm@gmail.com</a>
+                      </li>
+                  </ul>
+              </div>
+
+              <!-- Column 4: Social & Delivery -->
+              <div class="footer-social-col">
+                  <h3 class="footer-col-title">Follow Along</h3>
+                  <div class="footer-social-wrap">
+                      <a class="footer-social-btn" href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
+                          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2" fill="none"></rect><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" fill="none"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor"></circle></svg>
+                      </a>
+                      <a class="footer-social-btn" href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook">
+                          <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                      </a>
+                  </div>
+                  <div class="delivery-partners-note">
+                      <strong>Delivery Available on:</strong>
+                      <span>GrabFood • Foodpanda • Nham24 • Direct Phone Order</span>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Footer Bottom Bar -->
+          <div class="footer-bottom-bar">
+              <p>&copy; 2026 Cakery Charm Bakehouse. Baked with love &amp; care in Phnom Penh.</p>
+              <ul class="footer-bottom-links">
+                  <li><a href="about.html">Privacy</a></li>
+                  <li><a href="about.html">Terms</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+              <button class="back-to-top-btn" id="back-to-top-btn" type="button" aria-label="Scroll back to top">
+                  <span>Back to top</span> &uarr;
+              </button>
+          </div>
+      </div>
+  </footer>
   <script type="module" src="../js/checkout.js"></script>
+  <script type="module" src="../js/app.js"></script>
 </body>
 </html>

@@ -7,99 +7,429 @@
     <title>Contact | Cakery Charm</title>
     <meta name="description" content="Contact Cakery Charm for delivery, feedback, and bakery location details.">
     <link rel="stylesheet" href="../css/main.css">
-        <script type="module" src="../js/contact.js"></script>
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../css/header-footer.css">
+    <script type="module" src="../js/contact.js"></script>
 </head>
 
 <body>
-    <nav class="site-nav">
-        <a class="nav-left" href="../index.html" aria-label="Cakery Charm home">
-            <img class="logo" src="../images/logo.png" alt="Cakery Charm Logo">
-            <span>Cakery Charm</span>
-        </a>
-        <div class="nav-right">
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a class="active" href="contact.html" aria-current="page">Contact</a></li>
-                <li><a class="cart-button" href="checkout.html" aria-label="Open checkout"><span aria-hidden="true">&#128722;</span><strong>0</strong></a></li>
-  
-            </ul>
-        </div>
-    </nav>
-    <div class="main-container">
-        <form class="delivery-form" action="mailto:cakerycharm@gmail.com" method="post" enctype="text/plain">
-            <h3>Delivery</h3>
-            <div class="name">
-                <div class="first">
-                    <label for="fname">First name</label>
-                    <input id="fname" name="first_name" type="text" placeholder="First name" autocomplete="given-name" required>
-                </div>
-                <div class="last">
-                    <label for="lname">Last name</label>
-                    <input id="lname" name="last_name" type="text" placeholder="Last name" autocomplete="family-name" required>
-                </div>
-            </div>
-            <div class="num">
-                <div class="phone">
-                    <label for="pnumber">Phone number</label>
-                    <input id="pnumber" name="phone" type="tel" placeholder="Phone number" autocomplete="tel" required>
-                </div>
-                <div class="location">
-                    <label for="location">Delivery location</label>
-                    <input id="location" name="location" type="text" placeholder="Delivery location" autocomplete="street-address" required>
-                </div>
-            </div>
-            <p>Number of cakes</p>
-            <div class="box">
-                <label><input name="quantity" type="radio" value="1" required> 1 cake</label>
-                <label><input name="quantity" type="radio" value="2"> 2 cakes</label>
-                <label><input name="quantity" type="radio" value="3"> 3 cakes</label>
-                <label><input name="quantity" type="radio" value="4"> 4 cakes</label>
+    <div class="page-loader" aria-label="Loading Cakery Charm"><div class="loader-mark"><img src="../images/logo.png" alt=""><span>Cakery Charm</span><small>baking happiness...</small><i></i></div></div>
 
+    <!-- Top Announcement Bar -->
+    <div class="site-topbar">
+        <div class="topbar-highlight">
+            <span class="topbar-badge">Fresh Batch</span>
+            <span>Warm ovens every morning at 7:00 AM • Free mini pastry on orders over $15</span>
+        </div>
+        <div class="topbar-info">
+            <span>📍 Boeung Tumpun, Phnom Penh</span>
+            <span>⏰ 7:00 AM – 9:00 PM</span>
+            <span>📞 <a href="tel:123456789">123-456-789</a></span>
+        </div>
+    </div>
+
+    <!-- Main Header Navigation -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand-link" href="../index.html" aria-label="Cakery Charm Bakehouse">
+                <div class="brand-logo-wrap">
+                    <img src="../images/logo.png" alt="Cakery Charm Logo">
+                </div>
+                <div class="brand-text">
+                    <span class="brand-title">Cakery Charm</span>
+                    <span class="brand-subtitle">Artisan Bakehouse &amp; Cafe</span>
+                </div>
+            </a>
+
+            <nav class="nav-links-wrap" aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="menu.html">Menu <span class="nav-badge-new">Fresh</span></a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a class="active" href="contact.html" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a class="header-cta" href="menu.html">Order Online <span aria-hidden="true">&rarr;</span></a>
+                <a class="header-cart-btn cart-button" href="checkout.html" aria-label="Open checkout">
+                    <svg class="cart-icon-svg" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span class="cart-badge-count" id="cart-count">0</span>
+                </a>
+                <button class="mobile-toggle-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                </button>
             </div>
-            <button class="submit-btn">Submit</button>
-        </form>
-    </div>
-    <div class="delivery-icon">
-        <div class="icon-left">
-            <img src="../images/logo.png" alt="">
-            <h3>Quick and refreshing with delicious cakes and drinks</h3>
         </div>
-        <div class="icon-right">
-            <a class="button button-primary" href="../pages/menu.html">Browse the menu <span aria-hidden="true">&#8594;</span></a>
+    </header>
+
+    <main class="contact-page-wrapper">
+        <div class="contact-intro reveal-on-scroll">
+            <span class="eyebrow">GET IN TOUCH &amp; DELIVERY</span>
+            <h1>Contact &amp; Custom Orders</h1>
+            <p>Whether you're organizing a family gathering, ordering custom celebration cakes, or craving warm morning deliveries across Phnom Penh, we'd love to help.</p>
         </div>
-    </div>
-    <div class="feedback-location">
-        <h2>Feedback and Location</h2>
-        <div class="feedback-container">
+
+        <!-- Interactive Contact & Custom Order Hub -->
+        <div class="contact-layout-grid reveal-on-scroll">
+            <div class="contact-form-card" id="contact-main-card">
+                <!-- Mode Switcher Tabs -->
+                <div class="order-mode-tabs" role="tablist" aria-label="Order Mode Selection">
+                    <button class="order-mode-tab is-active" id="tab-custom-cake" type="button" role="tab" aria-selected="true" data-mode="custom-cake">🎂 Custom Cake Builder</button>
+                    <button class="order-mode-tab" id="tab-express-delivery" type="button" role="tab" aria-selected="false" data-mode="express-delivery">🛵 Express Delivery</button>
+                </div>
+
+                <!-- Custom Cake Builder Section -->
+                <div class="order-panel" id="panel-custom-cake">
+                    <span class="eyebrow">INTERACTIVE DESIGN STUDIO</span>
+                    <h2>Customize Your Dream Cake</h2>
+                    <p class="form-desc">Select your size, artisanal flavour pairings, and handcrafted decorations. Watch your real-time quote calculate below.</p>
+                    
+                    <form class="cake-builder-form" id="cake-builder-form">
+                        <!-- Cake Size Selector -->
+                        <div class="form-group">
+                            <label class="section-sublabel">1. Select Cake Size &amp; Servings</label>
+                            <div class="cake-size-selector-grid">
+                                <label class="cake-option-card">
+                                    <input type="radio" name="cake_size" value="6inch" data-base-price="18" checked>
+                                    <div class="card-inner">
+                                        <strong>6" Petite Bento</strong>
+                                        <span class="servings-tag">4–6 Servings</span>
+                                        <b class="card-price">$18.00</b>
+                                    </div>
+                                </label>
+                                <label class="cake-option-card">
+                                    <input type="radio" name="cake_size" value="8inch" data-base-price="28">
+                                    <div class="card-inner">
+                                        <strong>8" Celebration Classic</strong>
+                                        <span class="servings-tag">8–12 Servings</span>
+                                        <b class="card-price">$28.00</b>
+                                    </div>
+                                </label>
+                                <label class="cake-option-card">
+                                    <input type="radio" name="cake_size" value="10inch" data-base-price="42">
+                                    <div class="card-inner">
+                                        <strong>10" Grand Feast</strong>
+                                        <span class="servings-tag">14–20 Servings</span>
+                                        <b class="card-price">$42.00</b>
+                                    </div>
+                                </label>
+                                <label class="cake-option-card">
+                                    <input type="radio" name="cake_size" value="2tier" data-base-price="75">
+                                    <div class="card-inner">
+                                        <strong>2-Tier Royal Tier</strong>
+                                        <span class="servings-tag">25–35 Servings</span>
+                                        <b class="card-price">$75.00</b>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Flavor Profile -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cake-flavor">2. Flavor Sponge &amp; Filling</label>
+                                <select id="cake-flavor" name="cake_flavor" required>
+                                    <option value="belgian-chocolate" data-extra="0">🍫 Belgian Dark Chocolate Ganache (+$0)</option>
+                                    <option value="vanilla-berry" data-extra="0" selected>🍓 Bourbon Vanilla &amp; Wild Berries (+$0)</option>
+                                    <option value="matcha-strawberry" data-extra="2.50">🍵 Ceremonial Matcha &amp; Strawberries (+$2.50)</option>
+                                    <option value="lotus-caramel" data-extra="3.00">🍪 Biscoff Spiced Salted Caramel (+$3.00)</option>
+                                    <option value="red-velvet" data-extra="2.00">🍰 Silk Red Velvet &amp; Cream Cheese (+$2.00)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="cake-frosting">3. Exterior Frosting Style</label>
+                                <select id="cake-frosting" name="cake_frosting">
+                                    <option value="swiss-buttercream">Silky Swiss Meringue Buttercream</option>
+                                    <option value="naked-rustic">Semi-Naked Rustic Sourdough Cream</option>
+                                    <option value="mirror-glaze">Mirror Glaze Gloss Finish (+$4.00)</option>
+                                    <option value="whipped-ganache">Whipped French White Chocolate</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Add-ons Multi-check -->
+                        <div class="form-group">
+                            <label class="section-sublabel">4. Celebration Extras &amp; Candles</label>
+                            <div class="cake-addons-flex">
+                                <label class="addon-chip">
+                                    <input type="checkbox" name="addons" value="sparkler-candles" data-addon-price="2.00">
+                                    <span>✨ 4x Sparkler Candles (+$2.00)</span>
+                                </label>
+                                <label class="addon-chip">
+                                    <input type="checkbox" name="addons" value="gold-topper" data-addon-price="3.50">
+                                    <span>👑 Acrylic Golden Topper (+$3.50)</span>
+                                </label>
+                                <label class="addon-chip">
+                                    <input type="checkbox" name="addons" value="fresh-flowers" data-addon-price="6.00">
+                                    <span>🌸 Edible Fresh Floral Wreath (+$6.00)</span>
+                                </label>
+                                <label class="addon-chip">
+                                    <input type="checkbox" name="addons" value="macaron-crown" data-addon-price="5.00">
+                                    <span>🧁 5x French Macaron Topping (+$5.00)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Custom Message & Contact -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cake-customer-name">Your Name</label>
+                                <input id="cake-customer-name" name="customer_name" type="text" placeholder="e.g. Sothea" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cake-customer-phone">Phone Number</label>
+                                <input id="cake-customer-phone" name="customer_phone" type="tel" placeholder="e.g. 012 888 999" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cake-custom-text">Custom Piping Message on Cake / Board</label>
+                            <input id="cake-custom-text" name="custom_text" type="text" placeholder="e.g. Happy 30th Birthday Lisa! ❤️">
+                        </div>
+
+                        <!-- Live Quote Summary Box -->
+                        <div class="cake-quote-summary-card">
+                            <div class="quote-details">
+                                <span class="quote-label">Estimated Custom Cake Quote:</span>
+                                <strong class="quote-total-price" id="live-quote-price">$28.00</strong>
+                            </div>
+                            <div class="quote-action-btns">
+                                <button class="button button-coral" type="submit" id="submit-custom-cake-btn">Book Custom Cake &rarr;</button>
+                                <button class="button button-light" type="button" id="add-custom-cake-cart-btn">+ Add to Cart Cart</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Express Delivery Section -->
+                <div class="order-panel is-hidden" id="panel-express-delivery">
+                    <span class="eyebrow">EXPRESS DISPATCH</span>
+                    <h2>Direct Pastry &amp; Bread Delivery</h2>
+                    <p class="form-desc">Fill out your delivery address in Phnom Penh and we will dispatch freshly packed bakery items promptly.</p>
+                    
+                    <form class="delivery-form" id="express-delivery-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fname">First name</label>
+                                <input id="fname" name="first_name" type="text" placeholder="e.g. Sokha" autocomplete="given-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lname">Last name</label>
+                                <input id="lname" name="last_name" type="text" placeholder="e.g. Chan" autocomplete="family-name" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="pnumber">Phone number</label>
+                                <input id="pnumber" name="phone" type="tel" placeholder="e.g. 012 345 678" autocomplete="tel" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Delivery location (Street, Sangkat)</label>
+                                <input id="location" name="location" type="text" placeholder="e.g. St 371, Boeung Tumpun" autocomplete="street-address" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="section-sublabel">Preferred Pastry Selection</label>
+                            <div class="radio-pill-group">
+                                <label><input name="quantity" type="radio" value="Morning Croissant Box (6 pcs)" checked> Morning Croissant Box</label>
+                                <label><input name="quantity" type="radio" value="Artisan Sourdough & Baguettes"> Bread Feast</label>
+                                <label><input name="quantity" type="radio" value="Sweet Pastries & Tarts"> Sweet Treat Box</label>
+                                <label><input name="quantity" type="radio" value="Custom Assortment"> Custom Mix</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="order-notes">Special instructions / allergies</label>
+                            <textarea id="order-notes" name="notes" placeholder="e.g. Please leave at gate. Extra butter included please."></textarea>
+                        </div>
+                        <button class="button button-primary" type="submit">Submit Express Order &rarr;</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Sidebar Info & Live Status -->
+            <div class="contact-sidebar-card">
+                <span class="eyebrow">BAKEHOUSE INFO</span>
+                <h2>Visit or Call Us</h2>
+                <div class="contact-info-block">
+                    <div class="contact-info-icon">📍</div>
+                    <div class="contact-info-text">
+                        <h4>Bakehouse Location</h4>
+                        <p>Passerelles Numériques Cambodia (PNC)<br>Street 371, Boeung Tumpun, Phnom Penh</p>
+                    </div>
+                </div>
+                <div class="contact-info-block">
+                    <div class="contact-info-icon">⏰</div>
+                    <div class="contact-info-text">
+                        <h4>Baking Hours</h4>
+                        <p>Monday – Sunday: 7:00 AM – 9:00 PM<br>Fresh deck oven batch every morning at 7:00 AM</p>
+                    </div>
+                </div>
+                <div class="contact-info-block">
+                    <div class="contact-info-icon">📞</div>
+                    <div class="contact-info-text">
+                        <h4>Direct Line &amp; Orders</h4>
+                        <p><a href="tel:123456789">+855 (0) 123-456-789</a><br><a href="mailto:cakerycharm@gmail.com">cakerycharm@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="contact-info-block">
+                    <div class="contact-info-icon">🛵</div>
+                    <div class="contact-info-text">
+                        <h4>Delivery Partners</h4>
+                        <p>Available on GrabFood, Foodpanda &amp; WOWNOW across all 14 Phnom Penh khans.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feedback & Interactive Map Section -->
+        <div class="feedback-map-section reveal-on-scroll">
+            <div class="feedback-card">
+                <span class="eyebrow">YOUR THOUGHTS MATTER</span>
+                <h2>Send Us Your Feedback</h2>
                 <form class="feedback-form" action="mailto:cakerycharm@gmail.com" method="post" enctype="text/plain">
-                <h3>Feedback</h3>
-                <div class="email">
-                    <label for="email">Email</label>
-                    <input id="email" name="email" type="email" placeholder="Email" autocomplete="email" required>
-                </div>
-                <div class="feedback">
-                    <label for="feedback">Your feedback</label>
-                    <textarea id="feedback" name="feedback" placeholder="Tell us about your visit" required></textarea>
-                </div>
-                <button type="submit">Send feedback</button><p class="form-status" role="status" aria-live="polite"></p>
+                    <div class="form-group">
+                        <label for="email">Your Email address</label>
+                        <input id="email" name="email" type="email" placeholder="e.g. name@example.com" autocomplete="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedback">Your Experience / Feedback</label>
+                        <textarea id="feedback" name="feedback" placeholder="Tell us how you enjoyed our pastries, coffee, or service..." required></textarea>
+                    </div>
+                    <button class="button button-coral" type="submit">Send Feedback &rarr;</button>
+                    <p class="form-status" role="status" aria-live="polite"></p>
                 </form>
             </div>
-            <div class="location-map">
-                <h3>Location</h3>
+            <div class="map-card">
+                <span class="eyebrow">FIND US ON THE MAP</span>
+                <h2>Bakehouse Location</h2>
                 <iframe title="Cakery Charm location map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3909.013908327777!2d104.88050867324293!3d11.550859788648934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951add5e2cd81%3A0x171e0b69c7c6f7ba!2sPasserelles%20num%C3%A9riques%20Cambodia%20(PNC)!5e0!3m2!1sen!2skh!4v1730357899196!5m2!1sen!2skh" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
+        </div>
 
-        </div><section class="faq-section" aria-labelledby="faq-title"><p class="eyebrow">GOOD TO KNOW</p><h2 id="faq-title">Frequently asked questions</h2><details><summary>Do you offer same-day delivery?</summary><p>Yes, when our delivery slots are available. Send your order early for the best chance of a same-day treat.</p></details><details><summary>Can I order a celebration cake?</summary><p>Absolutely. Contact us with your date, flavour, and serving size and we will help plan it.</p></details><details><summary>Where can I pick up my order?</summary><p>We are in Phnom Penh and will confirm the exact pickup details with your order.</p></details></section>
+        <!-- FAQ Section -->
+        <section class="contact-faq-box reveal-on-scroll" aria-labelledby="faq-title">
+            <span class="eyebrow">GOOD TO KNOW</span>
+            <h2 id="faq-title">Frequently Asked Questions</h2>
+            <details class="faq-item">
+                <summary>Do you offer same-day pastry and cake delivery?</summary>
+                <p>Yes! We deliver across Phnom Penh daily between 7:30 AM and 8:30 PM. For morning croissants and warm baguettes, order by 8:00 AM.</p>
+            </details>
+            <details class="faq-item">
+                <summary>How far in advance should I order custom celebration cakes?</summary>
+                <p>For custom multi-tier designs or special flavour pairings, we recommend booking 24–48 hours in advance so our head pastry chef can prepare your handcrafted cake.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Can I pick up my order directly from the bakehouse counter?</summary>
+                <p>Yes, simply select pickup at checkout or give us a call. We will have your freshly boxed order ready with your name at our counter.</p>
+            </details>
+        </section>
+    </main>
+    <aside class="order-summary" id="order-summary" aria-label="Order summary" aria-hidden="true"><div class="order-head"><h2>Your cart</h2><button class="close-order" type="button" aria-label="Close order summary">&#10005;</button></div><div class="order-items"><p class="empty-order">Your order is waiting for something warm.</p></div><div class="order-breakdown"><div><span>Subtotal</span><strong>$<span id="cart-subtotal">0.00</span></strong></div><div><span>Delivery</span><strong>$<span id="cart-delivery">3.00</span></strong></div><div class="order-total"><span>Total</span><strong>$<span id="cart-total">0.00</span></strong></div></div><a class="button button-primary checkout-button" href="checkout.html">Proceed to checkout <span aria-hidden="true">&#8594;</span></a></aside>
+    <div class="order-toast" role="status" aria-live="polite"></div>
+    <footer class="site-footer-wrapper">
+        <div class="site-footer-container">
+            <!-- Newsletter Club Invitation -->
+            <div class="footer-newsletter-box reveal-on-scroll">
+                <div class="footer-newsletter-text">
+                    <span class="footer-newsletter-tag">✨ Join The Cakery Circle</span>
+                    <h2 class="footer-newsletter-title">Slow mornings, sweet treats.</h2>
+                    <p class="footer-newsletter-desc">Subscribe to receive weekend secret recipes, morning warm bread alerts, and 10% off your next order.</p>
+                </div>
+                <form class="footer-newsletter-form" id="footer-newsletter-form">
+                    <input class="footer-newsletter-input" id="footer-newsletter-email" type="email" placeholder="Enter your email address..." required aria-label="Your email address">
+                    <button class="footer-newsletter-btn" type="submit">Join Club &rarr;</button>
+                    <p class="newsletter-status-msg" id="newsletter-status-msg" role="status" aria-live="polite"></p>
+                </form>
+            </div>
 
-        
-    </div>
-    <footer class="site-footer">
-        <div><a class="footer-brand" href="../index.html">Cakery Charm</a><p>Fresh, delicious treats baked daily.<br>Made for slow mornings and sweet celebrations.</p></div>
-        <div><h2>Say hello</h2><a href="tel:123456789">123-456-789</a><a href="mailto:cakerycharm@gmail.com">cakerycharm@gmail.com</a></div>
-        <div><h2>Follow along</h2><a href="https://instagram.com" rel="noreferrer">Instagram</a><a href="https://facebook.com" rel="noreferrer">Facebook</a></div>
+            <!-- Footer Main Grid -->
+            <div class="footer-main-grid">
+                <!-- Column 1: Brand & Heritage -->
+                <div class="footer-brand-col">
+                    <a class="footer-brand-header" href="../index.html">
+                        <img class="footer-brand-logo" src="../images/logo.png" alt="Cakery Charm Logo">
+                        <div>
+                            <span class="footer-brand-name">Cakery Charm</span>
+                            <span class="footer-brand-tag">Artisan Bakehouse &amp; Cafe</span>
+                        </div>
+                    </a>
+                    <p class="footer-bio">A warm neighborhood bakery crafted for slow mornings, sweet celebrations, and freshly brewed coffees in Phnom Penh.</p>
+                    <div class="footer-badges-list">
+                        <span class="footer-badge-pill">🥐 Daily Small Batch</span>
+                        <span class="footer-badge-pill">🧈 100% French Butter</span>
+                        <span class="footer-badge-pill">☕ Specialty Roast</span>
+                    </div>
+                </div>
+
+                <!-- Column 2: Explore Navigation -->
+                <div class="footer-nav-col">
+                    <h3 class="footer-col-title">Explore</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="menu.html">Artisan Menu</a></li>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="contact.html">Custom Cakes</a></li>
+                        <li><a href="checkout.html">Quick Checkout</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Hours & Location -->
+                <div class="footer-info-col">
+                    <h3 class="footer-col-title">Visit Bakehouse</h3>
+                    <ul class="footer-info-list">
+                        <li>
+                            <span class="info-icon">📍</span>
+                            <span>Street 371, Boeung Tumpun, Phnom Penh, Cambodia</span>
+                        </li>
+                        <li>
+                            <span class="info-icon">⏰</span>
+                            <span>Mon – Sat: 7:00 AM – 9:00 PM<br>Sun: 8:00 AM – 7:00 PM</span>
+                        </li>
+                        <li>
+                            <span class="info-icon">📞</span>
+                            <a href="tel:123456789">+855 12 345 678</a>
+                        </li>
+                        <li>
+                            <span class="info-icon">✉️</span>
+                            <a href="mailto:cakerycharm@gmail.com">cakerycharm@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Social & Delivery -->
+                <div class="footer-social-col">
+                    <h3 class="footer-col-title">Follow Along</h3>
+                    <div class="footer-social-wrap">
+                        <a class="footer-social-btn" href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2" fill="none"></rect><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" fill="none"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor"></circle></svg>
+                        </a>
+                        <a class="footer-social-btn" href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                    </div>
+                    <div class="delivery-partners-note">
+                        <strong>Delivery Available on:</strong>
+                        <span>GrabFood • Foodpanda • Nham24 • Direct Phone Order</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Bar -->
+            <div class="footer-bottom-bar">
+                <p>&copy; 2026 Cakery Charm Bakehouse. Baked with love &amp; care in Phnom Penh.</p>
+                <ul class="footer-bottom-links">
+                    <li><a href="about.html">Privacy</a></li>
+                    <li><a href="about.html">Terms</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <button class="back-to-top-btn" id="back-to-top-btn" type="button" aria-label="Scroll back to top">
+                    <span>Back to top</span> &uarr;
+                </button>
+            </div>
+        </div>
     </footer>
+    <script type="module" src="../js/app.js"></script>
 </body>
 
 </html>

@@ -6,123 +6,275 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Cakery Charm</title>
     <meta name="description" content="Meet the family story and values behind Cakery Charm bakery.">
+    <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/about.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/header-footer.css">
 </head>
 
 <body>
-    <nav class="site-nav">
-        <a class="nav-left" href="../index.html" aria-label="Cakery Charm home">
-            <img class="logo" src="../images/logo.png" alt="Cakery Charm Logo">
-            <span>Cakery Charm</span>
-        </a>
-        <div class="nav-right">
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a class="active" href="about.html" aria-current="page">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a class="cart-button" href="checkout.html" aria-label="Open checkout"><span aria-hidden="true">&#128722;</span><strong>0</strong></a></li>
-               
+    <div class="page-loader" aria-label="Loading Cakery Charm"><div class="loader-mark"><img src="../images/logo.png" alt=""><span>Cakery Charm</span><small>baking happiness...</small><i></i></div></div>
+
+    <!-- Top Announcement Bar -->
+    <div class="site-topbar">
+        <div class="topbar-highlight">
+            <span class="topbar-badge">Fresh Batch</span>
+            <span>Warm ovens every morning at 7:00 AM • Free mini pastry on orders over $15</span>
+        </div>
+        <div class="topbar-info">
+            <span>📍 Boeung Tumpun, Phnom Penh</span>
+            <span>⏰ 7:00 AM – 9:00 PM</span>
+            <span>📞 <a href="tel:123456789">123-456-789</a></span>
+        </div>
+    </div>
+
+    <!-- Main Header Navigation -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand-link" href="../index.html" aria-label="Cakery Charm Bakehouse">
+                <div class="brand-logo-wrap">
+                    <img src="../images/logo.png" alt="Cakery Charm Logo">
+                </div>
+                <div class="brand-text">
+                    <span class="brand-title">Cakery Charm</span>
+                    <span class="brand-subtitle">Artisan Bakehouse &amp; Cafe</span>
+                </div>
+            </a>
+
+            <nav class="nav-links-wrap" aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="menu.html">Menu <span class="nav-badge-new">Fresh</span></a></li>
+                    <li><a class="active" href="about.html" aria-current="page">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a class="header-cta" href="menu.html">Order Online <span aria-hidden="true">&rarr;</span></a>
+                <a class="header-cart-btn cart-button" href="checkout.html" aria-label="Open checkout">
+                    <svg class="cart-icon-svg" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span class="cart-badge-count" id="cart-count">0</span>
+                </a>
+                <button class="mobile-toggle-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="about-page-wrapper">
+        <!-- Hero Story Banner -->
+        <section class="about-hero reveal-on-scroll" aria-labelledby="story-hero-title">
+            <div class="about-hero-image">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1200&h=1000&q=85" alt="Layered celebration cake with berries" loading="lazy" decoding="async">
+                <div class="about-hero-badge">
+                    <strong>10+</strong>
+                    <span>Years of Baking</span>
+                </div>
+            </div>
+            <div class="about-hero-copy">
+                <span class="eyebrow">OUR STORY &amp; HERITAGE</span>
+                <h1 id="story-hero-title">Incorporating family recipes and heritage.</h1>
+                <div class="about-quote-card">
+                    <p>“Every batch begins with time-tested family recipes, patient hands, and ingredients we are genuinely proud to share.”</p>
+                </div>
+                <p>The essence of Cakery Charm lies in blending this rich baking heritage with contemporary pastry craft, creating a welcoming neighborhood space where each treat feels like a warm memory served with love in Phnom Penh.</p>
+            </div>
+        </section>
+
+        <!-- 3 Pillars Grid -->
+        <section class="about-pillars-grid reveal-on-scroll">
+            <article class="about-pillar-card">
+                <div class="about-pillar-icon">🥐</div>
+                <h3>Made With Love</h3>
+                <p>From slow-fermented baguettes to hand-laminated croissants, every pastry is rolled and shaped with gentle devotion.</p>
+            </article>
+            <article class="about-pillar-card">
+                <div class="about-pillar-icon">🍓</div>
+                <h3>Seasonal Pastries</h3>
+                <p>Our bakehouse rotates flavours with harvest seasons, highlighting fresh berries, Cambodian vanilla, and rich chocolate.</p>
+            </article>
+            <article class="about-pillar-card">
+                <div class="about-pillar-icon">✨</div>
+                <h3>Celebration Cakes</h3>
+                <p>From birthday gatherings to quiet morning milestones, we craft custom cakes tailored for your special celebrations.</p>
+            </article>
+        </section>
+
+        <!-- Split Story 1 -->
+        <section class="about-story-split reveal-on-scroll">
+            <div class="about-story-content">
+                <span class="eyebrow">CRAFTED DAILY</span>
+                <h2>A few words about our bakehouse.</h2>
+                <p>Each loaf on our counter is crafted from unbleached flour, pure butter, and natural starters. We believe good bread takes time to ferment and develop its signature golden crust and honeycomb crumb.</p>
+                <p>“Each dish on the table was made with devotion, reflecting the care and passion that went into preparing it for friends and family.”</p>
+                <a class="button button-primary" href="menu.html">Explore Menu <span aria-hidden="true">&rarr;</span></a>
+            </div>
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&h=700&q=85" alt="Fresh artisan bread on bakery counter" loading="lazy" decoding="async">
+        </section>
+
+        <!-- Split Story 2 -->
+        <section class="about-story-split is-reversed reveal-on-scroll">
+            <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=900&h=700&q=85" alt="Golden baguettes ready to serve" loading="lazy" decoding="async">
+            <div class="about-story-content">
+                <span class="eyebrow">OUR ROOTS</span>
+                <h2>Neighborhood warm atmosphere.</h2>
+                <p>Founded in 2015 by Emma Thompson, Cakery Charm began as a cozy corner bakehouse designed to make customers feel instantly at home.</p>
+                <p>Picture sunlit wooden counters, the gentle aroma of freshly roasted beans, and trays of warm brioche emerging from stone deck ovens every morning.</p>
+                <a class="button button-light" href="contact.html">Visit Our Shop <span aria-hidden="true">&rarr;</span></a>
+            </div>
+        </section>
+
+        <!-- Rewards Box -->
+        <section class="about-rewards-box reveal-on-scroll">
+            <span class="eyebrow">CAKERY REWARDS CLUB</span>
+            <h2>Enjoy sweet rewards in three easy steps.</h2>
+            <p>Earn Stars with every morning coffee and pastry, unlocking free treats and VIP tasting events.</p>
+            <div class="about-steps-grid">
+                <div class="about-step-item">
+                    <span class="about-step-number">1</span>
+                    <h4>Join the Cakery Club</h4>
+                    <p>Subscribe with your email below or at checkout to get welcome perks and instant 10% off your first order.</p>
+                </div>
+                <div class="about-step-item">
+                    <span class="about-step-number">2</span>
+                    <h4>Order in shop or online</h4>
+                    <p>Order counter-side in Phnom Penh or choose seamless local delivery. You collect Stars on every item.</p>
+                </div>
+                <div class="about-step-item">
+                    <span class="about-step-number">3</span>
+                    <h4>Redeem for free treats</h4>
+                    <p>Exchange Stars for complimentary drinks, artisanal cakes, and exclusive weekend chef specials.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="about-timeline-section reveal-on-scroll">
+            <div>
+                <span class="eyebrow">OUR JOURNEY</span>
+                <h2>From a home oven to your favourite bakehouse.</h2>
+            </div>
+            <ul class="about-timeline-list">
+                <li>
+                    <span class="about-timeline-year">2015</span>
+                    <p>Emma begins baking heritage family sourdough and strawberry shortcakes for neighbors.</p>
+                </li>
+                <li>
+                    <span class="about-timeline-year">2019</span>
+                    <p>First Cakery Charm bakehouse opens on Street 371 in Boeung Tumpun, Phnom Penh.</p>
+                </li>
+                <li>
+                    <span class="about-timeline-year">2026</span>
+                    <p>Over 10,000 satisfied guests share slow mornings, afternoon tea, and custom cakes with us.</p>
+                </li>
             </ul>
-        </div>
-    </nav>
-    <div class="container">
-        <div class="images">
-            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&amp;fit=crop&amp;w=1200&amp;h=1000&amp;q=85" alt="Layered celebration cake with berries">
-        </div>
-        <div class="card">
-            <p class="eyebrow">OUR STORY</p>
-            <h1>Incorporating family recipes and heritage</h1>
-            <div class="card1">
-                    <p>Every batch begins with family recipes, careful hands, and ingredients we are proud to serve.</p>
+        </section>
+    </main>
+    <aside class="order-summary" id="order-summary" aria-label="Order summary" aria-hidden="true"><div class="order-head"><h2>Your cart</h2><button class="close-order" type="button" aria-label="Close order summary">&#10005;</button></div><div class="order-items"><p class="empty-order">Your order is waiting for something warm.</p></div><div class="order-breakdown"><div><span>Subtotal</span><strong>$<span id="cart-subtotal">0.00</span></strong></div><div><span>Delivery</span><strong>$<span id="cart-delivery">3.00</span></strong></div><div class="order-total"><span>Total</span><strong>$<span id="cart-total">0.00</span></strong></div></div><a class="button button-primary checkout-button" href="checkout.html">Proceed to checkout <span aria-hidden="true">&#8594;</span></a></aside>
+    <div class="order-toast" role="status" aria-live="polite"></div>
+    <footer class="site-footer-wrapper">
+        <div class="site-footer-container">
+            <!-- Newsletter Club Invitation -->
+            <div class="footer-newsletter-box reveal-on-scroll">
+                <div class="footer-newsletter-text">
+                    <span class="footer-newsletter-tag">✨ Join The Cakery Circle</span>
+                    <h2 class="footer-newsletter-title">Slow mornings, sweet treats.</h2>
+                    <p class="footer-newsletter-desc">Subscribe to receive weekend secret recipes, morning warm bread alerts, and 10% off your next order.</p>
+                </div>
+                <form class="footer-newsletter-form" id="footer-newsletter-form">
+                    <input class="footer-newsletter-input" id="footer-newsletter-email" type="email" placeholder="Enter your email address..." required aria-label="Your email address">
+                    <button class="footer-newsletter-btn" type="submit">Join Club &rarr;</button>
+                    <p class="newsletter-status-msg" id="newsletter-status-msg" role="status" aria-live="polite"></p>
+                </form>
             </div>
-            <div class="card2">
-                <p>The essence of CakeryCharm lies in blending this rich family history with the creativity of today, creating a one-of-a-kind bakery experience where each pastry feels like a piece of history served with love.</p>
+
+            <!-- Footer Main Grid -->
+            <div class="footer-main-grid">
+                <!-- Column 1: Brand & Heritage -->
+                <div class="footer-brand-col">
+                    <a class="footer-brand-header" href="../index.html">
+                        <img class="footer-brand-logo" src="../images/logo.png" alt="Cakery Charm Logo">
+                        <div>
+                            <span class="footer-brand-name">Cakery Charm</span>
+                            <span class="footer-brand-tag">Artisan Bakehouse &amp; Cafe</span>
+                        </div>
+                    </a>
+                    <p class="footer-bio">A warm neighborhood bakery crafted for slow mornings, sweet celebrations, and freshly brewed coffees in Phnom Penh.</p>
+                    <div class="footer-badges-list">
+                        <span class="footer-badge-pill">🥐 Daily Small Batch</span>
+                        <span class="footer-badge-pill">🧈 100% French Butter</span>
+                        <span class="footer-badge-pill">☕ Specialty Roast</span>
+                    </div>
+                </div>
+
+                <!-- Column 2: Explore Navigation -->
+                <div class="footer-nav-col">
+                    <h3 class="footer-col-title">Explore</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="menu.html">Artisan Menu</a></li>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="contact.html">Custom Cakes</a></li>
+                        <li><a href="checkout.html">Quick Checkout</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Hours & Location -->
+                <div class="footer-info-col">
+                    <h3 class="footer-col-title">Visit Bakehouse</h3>
+                    <ul class="footer-info-list">
+                        <li>
+                            <span class="info-icon">📍</span>
+                            <span>Street 371, Boeung Tumpun, Phnom Penh, Cambodia</span>
+                        </li>
+                        <li>
+                            <span class="info-icon">⏰</span>
+                            <span>Mon – Sat: 7:00 AM – 9:00 PM<br>Sun: 8:00 AM – 7:00 PM</span>
+                        </li>
+                        <li>
+                            <span class="info-icon">📞</span>
+                            <a href="tel:123456789">+855 12 345 678</a>
+                        </li>
+                        <li>
+                            <span class="info-icon">✉️</span>
+                            <a href="mailto:cakerycharm@gmail.com">cakerycharm@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Social & Delivery -->
+                <div class="footer-social-col">
+                    <h3 class="footer-col-title">Follow Along</h3>
+                    <div class="footer-social-wrap">
+                        <a class="footer-social-btn" href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2" fill="none"></rect><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" fill="none"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor"></circle></svg>
+                        </a>
+                        <a class="footer-social-btn" href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                    </div>
+                    <div class="delivery-partners-note">
+                        <strong>Delivery Available on:</strong>
+                        <span>GrabFood • Foodpanda • Nham24 • Direct Phone Order</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Bar -->
+            <div class="footer-bottom-bar">
+                <p>&copy; 2026 Cakery Charm Bakehouse. Baked with love &amp; care in Phnom Penh.</p>
+                <ul class="footer-bottom-links">
+                    <li><a href="about.html">Privacy</a></li>
+                    <li><a href="about.html">Terms</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <button class="back-to-top-btn" id="back-to-top-btn" type="button" aria-label="Scroll back to top">
+                    <span>Back to top</span> &uarr;
+                </button>
             </div>
         </div>
-    </div>
-    <div class="main">
-        <div class="main-left">
-            <h2>A few words about our Site</h2>
-            <p>White bread is a soft, light-colored bread made primarily from refined wheat flour.“Each dish on the table was made with love, reflecting the care and passion that went into preparing it for family and friends.”</p>
-        </div>
-        <div class="main-rigth">
-            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=900&amp;h=700&amp;q=85" alt="Fresh artisan bread on a bakery counter">
-        </div>
-    </div>
-    <div class="group-icon">
-        <div class="icon-1">
-            <img src="../images/logo.png" alt="">
-            <div class="icon-1-content">
-                <h3>MADE WITH LOVE</h3>
-                <span>The handmade quilt symbolizes a heartfelt gift, representing warmth, love, and treasured memories stitched into its fabric.</span>
-            </div>
-        </div>
-        <div class="icon-1">
-            <img src="../images/logo.png" alt="">
-           <div class="icon-1-content">
-               <h3>SEASONAL PASTRIES</h3>
-               <span>The bakery offered a selection of seasonal pastries, rich in holiday flavors like pumpkin spice and fresh berries.</span>
-           </div>
-        </div>
-        <div class="icon-1">
-            <img src="../images/logo.png" alt="">
-            <div class="icon-1-content">
-                <h3>EVENT CAT</h3>
-                <span>From birthday cakes to office mornings, we make gatherings feel a little more special.</span>
-            </div>
-        </div>
-    </div>
-    <div class="knowlage">
-        <div class="bakery-left">
-            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&amp;fit=crop&amp;w=900&amp;h=700&amp;q=85" alt="Freshly baked croissants cooling on a tray">
-        </div>
-        <div class="bakery-rigth">
-            <div class="btn">
-                <h1>Subscribes For Offer Updates</h1>
-                <a class="button button-primary" href="../pages/contact.html">Join our list <span aria-hidden="true">&#8594;</span></a>
-            </div>
-        </div>
-    </div>
-    <div class="pg">
-            <p>Getting started is easy. Earn Stars and enjoy rewards in three simple steps.</p>
-    </div>
-    <div class="text">
-        <div class="knowlage_icon_1 icon-img">
-            <h1>1</h1>
-            <h4>Create an acount</h4>
-            <p>To get started, <a href="../pages/contact.html">join our list</a> to get access to Cakery Charm updates and offers.
-                range of Cakery charm.</p>
-        </div>
-        <div class="knowlage_icon_2 icon-img">
-            <h1>2</h1>
-            <h4>Order and pay how you'd like</h4>
-            <p>Order at the counter or contact us for delivery. You will collect Stars either way.</p>
-        </div>
-        <div class="knowlage_icon_3 icon-img">
-            <h1>3</h1>
-            <h4>Earn Stars, get Rewards</h4>
-            <p>As you earn Stars,you can redeem them for Rewards-like free food ,drinks ,and more!.</p>
-        </div>
-    </div>
-    <div class="bread">
-        <div class="bread_left">
-            <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&amp;fit=crop&amp;w=900&amp;h=700&amp;q=85" alt="Golden baguettes ready to serve">
-        </div>
-        <div class="bread_right">
-            <h2>Background shop</h2>
-            <p> Cakerycharm , founded in 2015 by Emma Thompson, is a charming neighborhood spot known for its warm
-                atmosphere and delicious baked goods.CakeryCharm is a delightful little bakery shop designed to make customers feel at home the moment they walk in. Picture soft pastel walls in shades like light pink and mint green, which add a calming, inviting feel to the space. The shop has a vintage, rustic charm with wooden counters that give it a warm, cozy look.</p>
-        </div>
-    </div>
-    <section class="about-values" aria-labelledby="values-title"><p class="eyebrow">OUR PHILOSOPHY</p><h2 id="values-title">Fresh ingredients + beautiful design + a little magic.</h2><div class="values-grid"><article><strong>Freshness</strong><span>Baked in small batches, every day.</span></article><article><strong>Creativity</strong><span>Playful flavours made for sharing.</span></article><article><strong>Happiness</strong><span>Every detail should brighten your day.</span></article></div></section>
-    <section class="about-timeline" aria-labelledby="timeline-title"><div><p class="eyebrow">OUR JOURNEY</p><h2 id="timeline-title">From a home oven to your favourite corner.</h2></div><ol><li><strong>2015</strong><span>Emma starts baking family recipes for neighbours.</span></li><li><strong>2019</strong><span>Our first Cakery Charm counter opens in Phnom Penh.</span></li><li><strong>2024</strong><span>More than 1,000 happy customers join the story.</span></li></ol></section>
-    <section class="baker-section" aria-labelledby="baker-title"><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&amp;fit=crop&amp;w=900&amp;h=700&amp;q=85" alt="Baker preparing fresh pastries"><div><p class="eyebrow">MEET THE BAKER</p><h2 id="baker-title">A warm kitchen, always.</h2><p>Our small team brings patience, curiosity, and a generous spirit to every batch. We believe the best bakery moments are the ones passed from hand to hand.</p><a class="button button-primary" href="../pages/menu.html">Taste the story <span aria-hidden="true">&#8594;</span></a></div></section>
-    <footer class="site-footer">
-        <div><a class="footer-brand" href="../index.html">Cakery Charm</a><p>Fresh, delicious treats baked daily.<br>Made for slow mornings and sweet celebrations.</p></div>
-        <div><h2>Say hello</h2><a href="tel:123456789">123-456-789</a><a href="mailto:cakerycharm@gmail.com">cakerycharm@gmail.com</a></div>
-        <div><h2>Follow along</h2><a href="https://instagram.com" rel="noreferrer">Instagram</a><a href="https://facebook.com" rel="noreferrer">Facebook</a></div>
     </footer>
+    <script type="module" src="../js/app.js"></script>
 </body>
 </html>

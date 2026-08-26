@@ -3,33 +3,625 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cakery Charm | Freshly baked, thoughtfully made</title>
+    <title>Cakery Charm | Artisan Bakehouse &amp; Cafe</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/category-cards.css">
+    <link rel="stylesheet" href="css/header-footer.css">
     <link rel="stylesheet" href="pages/components/banner/banner.css">
     <meta name="description" content="Cakery Charm bakery: fresh bread, cakes, sandwiches, and drinks baked daily in Phnom Penh.">
 </head>
 <body>
     <div class="page-loader" aria-label="Loading Cakery Charm"><div class="loader-mark"><img src="images/logo.png" alt=""><span>Cakery Charm</span><small>baking happiness...</small><i></i></div></div>
-    <nav class="site-nav">
-        <a class="nav-left" href="index.html" aria-label="Cakery Charm home"><img class="logo" src="./images/logo.png" alt=""><span>Cakery Charm</span></a>
-        <div class="nav-right"><ul><li><a class="active" href="index.html" aria-current="page">Home</a></li><li><a href="./pages/menu.html">Menu</a></li><li><a href="./pages/about.html">About</a></li><li><a href="./pages/contact.html">Contact</a></li><li><button class="cart-button" type="button" aria-label="Open order summary" aria-controls="order-summary"><span aria-hidden="true">&#128722;</span><strong id="cart-count">0</strong></button></li></ul></div>
-    </nav>
+
+    <!-- Top Announcement Bar -->
+    <div class="site-topbar">
+        <div class="topbar-highlight">
+            <span class="topbar-badge">Fresh Batch</span>
+            <span>Warm ovens every morning at 7:00 AM &bull; Free mini pastry on orders over $15</span>
+        </div>
+        <div class="topbar-info">
+            <span>📍 Boeung Tumpun, Phnom Penh</span>
+            <span>⏰ 7:00 AM – 9:00 PM</span>
+            <span>📞 <a href="tel:123456789">123-456-789</a></span>
+        </div>
+    </div>
+
+    <!-- Main Header Navigation -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand-link" href="index.html" aria-label="Cakery Charm Bakehouse">
+                <div class="brand-logo-wrap">
+                    <img src="./images/logo.png" alt="Cakery Charm Logo">
+                </div>
+                <div class="brand-text">
+                    <span class="brand-title">Cakery Charm</span>
+                    <span class="brand-subtitle">Artisan Bakehouse &amp; Cafe</span>
+                </div>
+            </a>
+
+            <nav class="nav-links-wrap" aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li><a class="active" href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="./pages/menu.html">Menu <span class="nav-badge-new">Fresh</span></a></li>
+                    <li><a href="./pages/about.html">About</a></li>
+                    <li><a href="./pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a class="header-cta" href="./pages/menu.html">Order Online <span aria-hidden="true">&rarr;</span></a>
+                <button class="header-cart-btn cart-button" type="button" aria-label="Open order summary" aria-controls="order-summary">
+                    <svg class="cart-icon-svg" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span class="cart-badge-count" id="cart-count">0</span>
+                </button>
+                <button class="mobile-toggle-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
     <main class="home-page">
-        <section class="hero" aria-labelledby="hero-title"><div class="hero-copy"><p class="eyebrow">BAKED FRESH IN PHNOM PENH</p><h1 id="hero-title">Sweet moments,<br><em>beautifully made.</em></h1><p class="hero-text">Cakes, drinks, and little moments made with care. Choose your favourite and we will have it ready for you.</p><div class="hero-actions"><a class="button button-primary" href="./pages/menu.html">Order now <span aria-hidden="true">&#8594;</span></a><a class="text-link" href="./pages/menu.html">Explore the menu</a></div><div class="hero-note"><span aria-hidden="true">&#10022;</span> Baked every morning, served with care</div><div class="hero-stats"><span><strong>&#9679;</strong> Fresh today</span><span><strong>&#9733;</strong> 4.9 rating</span><span><strong>30+</strong> flavours</span></div></div><div class="hero-art" aria-label="Fresh chocolate pastry and baguette"><div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div><div class="floating-badge">FRESHLY<br>BAKED TODAY</div><img class="hero-pastry" src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&amp;fit=crop&amp;w=700&amp;h=900&amp;q=85" alt="Chocolate pastry"><img class="hero-baguette" src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&amp;fit=crop&amp;w=700&amp;h=500&amp;q=85" alt="Fresh baguette"><div class="hero-stamp">MADE<br>WITH<br>LOVE</div></div></section>
-        <section class="offer-slideshow" aria-label="Daily bakery set offers" tabindex="0"><div class="offer-track"><article class="offer-slide is-active" data-slide="0" aria-hidden="false"><img src="images/morning.png" alt="Morning Set with iced coffee and sandwich for 5 dollars"><div class="offer-copy"><p class="eyebrow">START THE DAY SWEETLY</p><h2>Morning Set</h2><p>Iced coffee and a toasted sandwich.</p><a class="button button-primary" href="./pages/menu.html">Order morning set <span aria-hidden="true">&#8594;</span></a></div></article><article class="offer-slide" data-slide="1" aria-hidden="true"><img src="images/afternoon.png" alt="Afternoon Set with raspberry drink and cupcake for 4 dollars"><div class="offer-copy"><p class="eyebrow">A LITTLE AFTERNOON JOY</p><h2>Afternoon Set</h2><p>Something bright for your sweet break.</p><a class="button button-primary" href="./pages/menu.html">Order afternoon set <span aria-hidden="true">&#8594;</span></a></div></article><article class="offer-slide" data-slide="2" aria-hidden="true"><img src="images/evening.png" alt="Evening Set with soda and pizza for 5 dollars"><div class="offer-copy"><p class="eyebrow">END THE DAY WELL</p><h2>Evening Set</h2><p>Share a warm, easy dinner together.</p><a class="button button-primary" href="./pages/menu.html">Order evening set <span aria-hidden="true">&#8594;</span></a></div></article></div><button class="offer-control offer-prev" type="button" aria-label="Previous offer">&#8592;</button><button class="offer-control offer-next" type="button" aria-label="Next offer">&#8594;</button><div class="offer-dots" role="tablist" aria-label="Choose an offer"><button class="offer-dot is-active" type="button" role="tab" aria-selected="true" aria-label="Morning Set" data-go="0"></button><button class="offer-dot" type="button" role="tab" aria-selected="false" aria-label="Afternoon Set" data-go="1"></button><button class="offer-dot" type="button" role="tab" aria-selected="false" aria-label="Evening Set" data-go="2"></button></div></section>
-        <section class="home-section category-section reveal-on-scroll" aria-labelledby="categories-title"><div class="section-heading"><div><p class="eyebrow">TAKE YOUR PICK</p><h2 id="categories-title">Something for every craving</h2></div><a class="text-link" href="./pages/menu.html">View all treats <span aria-hidden="true">&#8594;</span></a></div><div class="category-grid"><a class="category-tile category-drink" href="./pages/menu.html"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&amp;fit=crop&amp;w=700&amp;h=700&amp;q=85" alt="Drinks"><span>Drinks</span><small>Cool &amp; comforting</small></a><a class="category-tile category-cake" href="./pages/menu.html"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&amp;fit=crop&amp;w=700&amp;h=700&amp;q=85" alt="Cakes"><span>Cakes</span><small>Made to celebrate</small></a><a class="category-tile category-bread" href="./pages/menu.html"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=700&amp;h=700&amp;q=85" alt="Breads"><span>Breads</span><small>Golden and warm</small></a><a class="category-tile category-sandwich" href="./pages/menu.html"><img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&amp;fit=crop&amp;w=700&amp;h=700&amp;q=85" alt="Sandwiches"><span>Sandwiches</span><small>Freshly filled</small></a></div></section>
-        <section class="home-section popular-section" aria-labelledby="popular-title"><div class="section-heading"><div><p class="eyebrow">CUSTOMER FAVOURITES</p><h2 id="popular-title">The ones that disappear first</h2></div><p class="section-aside">Handpicked from today's counter</p></div><div class="bakery-grid"><article class="bakery-item" data-product="Baguette" data-price="2.50"><span class="item-image"><img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&amp;fit=crop&amp;w=700&amp;h=700&amp;q=85" alt="Baguette"></span><span class="item-info"><strong>Baguette</strong><small>Classic crust, soft centre</small><b>$2.50</b></span><div class="card-actions"><label>Qty <input class="quantity" type="number" min="1" max="10" value="1" aria-label="Baguette quantity"></label><button class="add-button" type="button">Add to order</button></div></article><article class="bakery-item" data-product="Chocolate" data-price="3.50"><span class="item-image"><img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&amp;fit=crop&amp;w=700&amp;h=700&amp;q=85" alt="Chocolate pastry"></span><span class="item-info"><strong>Chocolate</strong><small>Rich, flaky, irresistible</small><b>$3.50</b></span><div class="card-actions"><label>Qty <input class="quantity" type="number" min="1" max="10" value="1" aria-label="Chocolate quantity"></label><button class="add-button" type="button">Add to order</button></div></article><article class="bakery-item" data-product="Multigrain" data-price="2.40"><span class="item-image"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=700&amp;h=700&amp;q=85" alt="Multigrain bread"></span><span class="item-info"><strong>Multigrain</strong><small>Wholesome and hearty</small><b>$2.40</b></span><div class="card-actions"><label>Qty <input class="quantity" type="number" min="1" max="10" value="1" aria-label="Multigrain quantity"></label><button class="add-button" type="button">Add to order</button></div></article><article class="bakery-item" data-product="Strawberry" data-price="1.50"><span class="item-image"><img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&amp;fit=crop&amp;w=700&amp;h=700&amp;q=85" alt="Strawberry drink"></span><span class="item-info"><strong>Strawberry</strong><small>Bright, creamy, chilled</small><b>$1.50</b></span><div class="card-actions"><label>Qty <input class="quantity" type="number" min="1" max="10" value="1" aria-label="Strawberry quantity"></label><button class="add-button" type="button">Add to order</button></div></article></div></section>
-        <section class="home-section why-section" aria-labelledby="why-title"><div class="section-heading"><div><p class="eyebrow">WHY CAKERY CHARM?</p><h2 id="why-title">The little details matter.</h2></div><p class="section-aside">Made slowly. Shared gladly.</p></div><div class="why-grid"><article><span>01</span><h3>Fresh by default</h3><p>Our counter starts every morning with warm bakes and bright, seasonal flavours.</p></article><article><span>02</span><h3>Thoughtfully made</h3><p>Family recipes meet a playful modern touch in every cake, pastry, and drink.</p></article><article><span>03</span><h3>Easy to love</h3><p>Pick up in Phnom Penh or send a little sweetness straight to someone special.</p></article></div></section>
-        <section class="promotion-strip" aria-labelledby="promotion-title"><div><p class="eyebrow">A LITTLE EXTRA</p><h2 id="promotion-title">Make the moment sweeter.</h2><p>Get a complimentary mini pastry with orders over $15 this week.</p></div><a class="button button-primary" href="./pages/menu.html">Build your order <span aria-hidden="true">&#8594;</span></a></section>
-        <section class="home-section testimonial-section" aria-labelledby="testimonial-title"><div class="section-heading"><div><p class="eyebrow">KIND WORDS</p><h2 id="testimonial-title">Loved by slow mornings.</h2></div></div><div class="testimonial-grid"><blockquote><p>“The croissants are flaky perfection, and the whole shop feels like a warm hug.”</p><footer>— Dara, Phnom Penh</footer></blockquote><blockquote><p>“Our celebration cake looked beautiful and tasted even better. We will be back.”</p><footer>— Lina, Toul Kork</footer></blockquote><blockquote><p>“Fast delivery, thoughtful packaging, and the best strawberry drink in town.”</p><footer>— Vuthy, BKK1</footer></blockquote></div></section>
-        <section class="home-section gallery-section" aria-labelledby="gallery-title"><div class="section-heading"><div><p class="eyebrow">FROM OUR COUNTER</p><h2 id="gallery-title">A little sweetness, shared.</h2></div><a class="text-link" href="https://instagram.com" rel="noreferrer">Follow along <span aria-hidden="true">&#8594;</span></a></div><div class="gallery-grid"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&amp;fit=crop&amp;w=600&amp;h=600&amp;q=85" alt="Celebration cake"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&amp;fit=crop&amp;w=600&amp;h=600&amp;q=85" alt="Fresh coffee"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&amp;fit=crop&amp;w=600&amp;h=600&amp;q=85" alt="Croissants"><img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&amp;fit=crop&amp;w=600&amp;h=600&amp;q=85" alt="Fresh sandwich"></div></section>
-        <section class="final-cta" aria-labelledby="final-title"><p class="eyebrow">YOUR NEXT FAVOURITE IS WAITING</p><h2 id="final-title">Bring home a little joy.</h2><a class="button button-light" href="./pages/menu.html">Start browsing <span aria-hidden="true">&#8594;</span></a></section>
-        <section class="visit-strip" aria-labelledby="visit-title"><div><p class="eyebrow">COME SAY HELLO</p><h2 id="visit-title">Your new favourite corner of the city.</h2></div><div class="visit-details"><p><strong>Open daily</strong><br>Mon-Sat 7:00 AM-9:00 PM<br>Sun 8:00 AM-7:00 PM</p><a class="button button-light" href="./pages/contact.html">Find us in Phnom Penh</a></div></section>
+        <!-- Hero Section Redesign -->
+        <section class="hero hero-redesign" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <div class="hero-status-pill">
+                    <span class="live-pulse"></span>
+                    <span id="hero-live-status-text">Deck Oven Batch #3 Warm &amp; Ready &bull; Phnom Penh Delivery</span>
+                </div>
+                <p class="eyebrow">ARTISAN BAKEHOUSE &bull; EST. 2026</p>
+                <h1 id="hero-title">Slow mornings,<br><em>warm baked joy.</em></h1>
+                <p class="hero-text">72-hour slow fermented sourdoughs, 81-layer French butter croissants, handcrafted celebration gateaux, and specialty iced brews baked fresh daily in Phnom Penh.</p>
+                
+                <!-- Quick Hero Search Bar & Category Tags -->
+                <div class="hero-search-box">
+                    <form class="hero-search-form" action="./pages/menu.html" method="GET">
+                        <svg class="hero-search-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" fill="none"></circle><line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2"></line></svg>
+                        <input type="search" name="search" placeholder="What are you craving? (e.g. Croissant, Truffle Cake, Sourdough...)" aria-label="Search baked goods">
+                        <button type="submit" class="hero-search-btn">Search &rarr;</button>
+                    </form>
+                    <div class="hero-quick-chips">
+                        <span class="quick-chip-label">Popular:</span>
+                        <a href="./pages/menu.html?category=bread" class="hero-chip">🥐 Croissants</a>
+                        <a href="./pages/menu.html?category=cake" class="hero-chip">🍰 Truffle Cake</a>
+                        <a href="./pages/menu.html?category=sandwich" class="hero-chip">🥪 Brioche</a>
+                        <a href="./pages/menu.html?category=drink" class="hero-chip">☕ Iced Espresso</a>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <a class="button button-primary" href="./pages/menu.html">Explore Artisan Menu <span aria-hidden="true">&rarr;</span></a>
+                    <a class="button button-secondary-hero" href="./pages/contact.html">Custom Cakes</a>
+                    <span class="hero-delivery-tag">⚡ Citywide delivery in 30–45 mins</span>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-pill"><span class="stat-icon">⭐</span> <strong>4.9 Rating</strong> <small>(850+ reviews)</small></div>
+                    <div class="stat-pill"><span class="stat-icon">🧈</span> <strong>100% French</strong> <small>AOP Butter</small></div>
+                    <div class="stat-pill"><span class="stat-icon">🌾</span> <strong>72h Starter</strong> <small>Wild Ferment</small></div>
+                </div>
+            </div>
+
+            <!-- Hero Visual Stage with Interactive Floating Cards -->
+            <div class="hero-art hero-art-redesign" aria-label="Fresh artisan baked goods showcase">
+                <div class="hero-ambient-glow"></div>
+                <div class="hero-orbit orbit-one"></div>
+                <div class="hero-orbit orbit-two"></div>
+                
+                <div class="floating-badge hero-fresh-badge">
+                    <span class="badge-icon">🥖</span>
+                    <span class="badge-text">BAKED FRESH<br><strong>EVERY MORNING</strong></span>
+                </div>
+
+                <!-- Main Hero Images -->
+                <div class="hero-images-composition">
+                    <img class="hero-pastry" src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&amp;fit=crop&amp;w=700&amp;h=900&amp;q=85" alt="Golden French Croissant" loading="lazy" decoding="async">
+                    <img class="hero-baguette" src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&amp;fit=crop&amp;w=700&amp;h=500&amp;q=85" alt="Handcrafted Chocolate Cake" loading="lazy" decoding="async">
+                </div>
+
+                <!-- Interactive Floating Action Card 1 -->
+                <div class="hero-floating-card card-top-left reveal-on-scroll is-visible">
+                    <div class="floating-card-icon">🥐</div>
+                    <div class="floating-card-info">
+                        <strong>French Croissant</strong>
+                        <span>100% Normandy Butter &bull; $2.50</span>
+                    </div>
+                    <button class="hero-quick-add-btn" type="button" data-id="croissant-classic" data-name="French Butter Croissant" data-price="2.50" data-img="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&amp;fit=crop&amp;w=700&amp;h=500&amp;q=85" data-cat="pastry" aria-label="Quick add Croissant to order">+ Add</button>
+                </div>
+
+                <!-- Interactive Floating Action Card 2 -->
+                <div class="hero-floating-card card-bottom-right reveal-on-scroll is-visible">
+                    <div class="floating-card-icon">☕</div>
+                    <div class="floating-card-info">
+                        <strong>Mondulkiri Espresso</strong>
+                        <span>Single-origin cold brew &bull; $2.50</span>
+                    </div>
+                    <button class="hero-quick-add-btn" type="button" data-id="iced-mondulkiri-coffee" data-name="Mondulkiri Iced Espresso" data-price="2.50" data-img="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&amp;fit=crop&amp;w=700&amp;h=500&amp;q=85" data-cat="drink" aria-label="Quick add Iced Coffee to order">+ Add</button>
+                </div>
+
+                <div class="hero-stamp">100% FRENCH BUTTER &bull; ARTISAN CRAFT</div>
+            </div>
+        </section>
+
+        <!-- Live Bakehouse Oven Schedule Tracker -->
+        <section class="home-section schedule-section reveal-on-scroll" aria-labelledby="schedule-title">
+            <div class="schedule-container">
+                <div class="schedule-header">
+                    <div>
+                        <span class="schedule-pill"><span class="live-pulse"></span> Live Deck Oven Tracker</span>
+                        <h2 id="schedule-title">Today at the Bakehouse</h2>
+                    </div>
+                    <p class="schedule-sub">We bake in small, continuous batches throughout the day so your pastries and loaves are always at peak crispness.</p>
+                </div>
+                <div class="schedule-cards-grid">
+                    <div class="schedule-card is-active" id="batch-morning">
+                        <div class="schedule-time-badge">07:00 AM</div>
+                        <div class="schedule-card-body">
+                            <span class="schedule-status-tag status-fresh">✓ Fresh Out of Oven</span>
+                            <h3>Morning Viennoiserie &amp; Sourdough</h3>
+                            <p>Flaky butter croissants, pain au chocolat, tradition sourdough loaves &amp; baguettes.</p>
+                            <span class="schedule-temp">Deck Oven: 235&deg;C &bull; Batch #1 &amp; #2</span>
+                        </div>
+                    </div>
+                    <div class="schedule-card" id="batch-midday">
+                        <div class="schedule-time-badge">11:30 AM</div>
+                        <div class="schedule-card-body">
+                            <span class="schedule-status-tag status-warm">🔥 Warm Lunch Batch</span>
+                            <h3>Brioche Sandwiches &amp; Savory Rolls</h3>
+                            <p>Smoked ham &amp; gruyere croissants, fire floss buns, sausage cheddar rolls &amp; sourdough melts.</p>
+                            <span class="schedule-temp">Deck Oven: 210&deg;C &bull; Batch #3</span>
+                        </div>
+                    </div>
+                    <div class="schedule-card" id="batch-afternoon">
+                        <div class="schedule-time-badge">03:00 PM</div>
+                        <div class="schedule-card-body">
+                            <span class="schedule-status-tag status-ready">✨ Teatime Glaze</span>
+                            <h3>Celebration Cakes &amp; Chilled Brews</h3>
+                            <p>Chocolate strawberry truffle cakes, fresh berry tarts, iced matcha &amp; cold brew coffees.</p>
+                            <span class="schedule-temp">Pastry Room: 18&deg;C &bull; Chilled Prep</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Daily Set Offers Carousel -->
+        <section class="offer-slideshow reveal-on-scroll" aria-label="Daily bakery set offers" tabindex="0">
+            <div class="offer-track">
+                <article class="offer-slide is-active" data-slide="0" aria-hidden="false">
+                    <img src="images/morning.png" alt="Morning Set with iced coffee and sandwich" loading="lazy" decoding="async">
+                    <div class="offer-copy">
+                        <span class="offer-deal-tag">Save 24% &bull; Morning Special</span>
+                        <p class="eyebrow">START THE DAY SWEETLY</p>
+                        <h2>Morning Sunshine Set</h2>
+                        <p>Parisian Ham &amp; Smoked Gruyère Croissant with chilled Phnom Penh Iced Coffee.</p>
+                        <button class="button button-primary add-combo-btn" type="button">Add Set &bull; $3.80 <span aria-hidden="true">&rarr;</span></button>
+                    </div>
+                </article>
+                <article class="offer-slide" data-slide="1" aria-hidden="true">
+                    <img src="images/afternoon.png" alt="Afternoon Set with strawberry drink and cake" loading="lazy" decoding="async">
+                    <div class="offer-copy">
+                        <span class="offer-deal-tag">Save 18% &bull; Midday Joy</span>
+                        <p class="eyebrow">A LITTLE AFTERNOON JOY</p>
+                        <h2>Afternoon Sweet Break</h2>
+                        <p>Signature Chocolate Strawberry Truffle Cake slice paired with Strawberry Hibiscus Fizz.</p>
+                        <button class="button button-primary add-combo-btn" type="button">Add Set &bull; $4.50 <span aria-hidden="true">&rarr;</span></button>
+                    </div>
+                </article>
+                <article class="offer-slide" data-slide="2" aria-hidden="true">
+                    <img src="images/evening.png" alt="Evening Set with brioche burger and soda" loading="lazy" decoding="async">
+                    <div class="offer-copy">
+                        <span class="offer-deal-tag">Save 23% &bull; Sunset Pairing</span>
+                        <p class="eyebrow">END THE DAY WELL</p>
+                        <h2>Sunset Dinner Pairing</h2>
+                        <p>Toasted Brioche Smash Burger &amp; Truffle Wedges with Sparkling Pineapple Basil Cooler.</p>
+                        <button class="button button-primary add-combo-btn" type="button">Add Set &bull; $5.00 <span aria-hidden="true">&rarr;</span></button>
+                    </div>
+                </article>
+            </div>
+            <button class="offer-control offer-prev" type="button" aria-label="Previous offer">&#8592;</button>
+            <button class="offer-control offer-next" type="button" aria-label="Next offer">&#8594;</button>
+            <div class="offer-dots" role="tablist" aria-label="Choose an offer">
+                <button class="offer-dot is-active" type="button" role="tab" aria-selected="true" aria-label="Morning Set" data-go="0"></button>
+                <button class="offer-dot" type="button" role="tab" aria-selected="false" aria-label="Afternoon Set" data-go="1"></button>
+                <button class="offer-dot" type="button" role="tab" aria-selected="false" aria-label="Evening Set" data-go="2"></button>
+            </div>
+        </section>
+
+        <!-- Bento Category Grid -->
+        <section class="home-section category-section reveal-on-scroll" aria-labelledby="categories-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">BROWSE OUR CRAFT</p>
+                    <h2 id="categories-title">Something warm for every craving</h2>
+                </div>
+                <a class="text-link" href="./pages/menu.html">View complete 20+ item menu <span aria-hidden="true">&rarr;</span></a>
+            </div>
+            <div class="category-grid">
+                <a class="category-tile category-bread" href="./pages/menu.html?category=bread">
+                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=700&amp;h=700&amp;q=85" alt="Artisan Breads" loading="lazy" decoding="async">
+                    <span class="category-title-text">Breads &amp; Pastries</span>
+                    <small>Golden viennoiseries &amp; slow sourdough</small>
+                    <div class="cat-tag-pill">8 Fresh Items</div>
+                </a>
+                <a class="category-tile category-cake" href="./pages/menu.html?category=cake">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&amp;fit=crop&amp;w=700&amp;h=700&amp;q=85" alt="Celebration Cakes" loading="lazy" decoding="async">
+                    <span class="category-title-text">Celebration Cakes</span>
+                    <small>Handcrafted for unforgettable moments</small>
+                    <div class="cat-tag-pill">6 Fresh Items</div>
+                </a>
+                <a class="category-tile category-sandwich" href="./pages/menu.html?category=sandwich">
+                    <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&amp;fit=crop&amp;w=700&amp;h=700&amp;q=85" alt="Savory Sandwiches" loading="lazy" decoding="async">
+                    <span class="category-title-text">Savory Sandwiches</span>
+                    <small>Farm fresh fillings on buttery brioche</small>
+                    <div class="cat-tag-pill">5 Fresh Items</div>
+                </a>
+                <a class="category-tile category-drink" href="./pages/menu.html?category=drink">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&amp;fit=crop&amp;w=700&amp;h=700&amp;q=85" alt="Specialty Drinks" loading="lazy" decoding="async">
+                    <span class="category-title-text">Specialty Drinks</span>
+                    <small>Mondulkiri espresso &amp; botanical coolers</small>
+                    <div class="cat-tag-pill">5 Fresh Items</div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Customer Favorites with Interactive Filter Chips -->
+        <section class="home-section popular-section reveal-on-scroll" aria-labelledby="popular-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">BAKER'S SELECTION</p>
+                    <h2 id="popular-title">The ones that disappear first</h2>
+                </div>
+                <div class="popular-filter-tabs" role="group" aria-label="Filter highlights">
+                    <button class="popular-filter-chip is-active" type="button" data-filter="all">✨ All Favorites</button>
+                    <button class="popular-filter-chip" type="button" data-filter="bread">🥐 Breads &amp; Pastries</button>
+                    <button class="popular-filter-chip" type="button" data-filter="cake">🎂 Cakes &amp; Tarts</button>
+                    <button class="popular-filter-chip" type="button" data-filter="sandwich">🥪 Savory Brioche</button>
+                    <button class="popular-filter-chip" type="button" data-filter="drink">☕ Cold Brews</button>
+                </div>
+            </div>
+            <div class="bakery-grid">
+                <!-- Dynamically rendered with rich interactive steppers & favorites via home.js -->
+            </div>
+            <div class="view-more-center">
+                <a class="button button-primary" href="./pages/menu.html">Explore Full Artisan Menu &bull; 20+ Items <span aria-hidden="true">&rarr;</span></a>
+            </div>
+        </section>
+
+        <!-- Why Cakery Charm / The Artisan Standard -->
+        <section class="home-section why-section reveal-on-scroll" aria-labelledby="why-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">THE ARTISAN STANDARD</p>
+                    <h2 id="why-title">Baking without shortcuts.</h2>
+                </div>
+                <p class="section-aside">Honest ingredients &bull; Slow fermentation</p>
+            </div>
+            <div class="why-grid">
+                <article class="why-card">
+                    <div class="why-card-top">
+                        <span class="why-icon">🧈</span>
+                        <span class="why-number">01</span>
+                    </div>
+                    <h3>100% French AOP Butter</h3>
+                    <p>We never use margarine, shortening, or artificial flavourings. Every croissant and brioche is folded with pure Normandy cream butter for incomparable aroma, crisp exterior, and melt-in-your-mouth honeycomb flake.</p>
+                    <div class="why-card-footer">
+                        <span class="why-pill">81 Flaky Layers</span>
+                        <span class="why-pill">Zero Trans Fats</span>
+                    </div>
+                </article>
+                <article class="why-card">
+                    <div class="why-card-top">
+                        <span class="why-icon">🌾</span>
+                        <span class="why-number">02</span>
+                    </div>
+                    <h3>72-Hour Wild Starter Fermentation</h3>
+                    <p>Our sourdough mothers rest in slow cold fermentation, naturally breaking down gluten proteins for gentle digestibility, deep caramelized crusts, and an authentic airy open crumb structure.</p>
+                    <div class="why-card-footer">
+                        <span class="why-pill">Prebiotic Starter</span>
+                        <span class="why-pill">No Added Sugar</span>
+                    </div>
+                </article>
+                <article class="why-card">
+                    <div class="why-card-top">
+                        <span class="why-icon">🛵</span>
+                        <span class="why-number">03</span>
+                    </div>
+                    <h3>Insulated Citywide Dispatch</h3>
+                    <p>Baked warm at dawn and carefully hand-packaged in compostable kraft bakery boxes with thermal seals. Delivered express across Phnom Penh or ready for pickup at our Boeung Tumpun counter.</p>
+                    <div class="why-card-footer">
+                        <span class="why-pill">30–45 Mins Delivery</span>
+                        <span class="why-pill">Eco-Friendly Kraft</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Custom Cake Consultation Teaser -->
+        <section class="home-section custom-cake-teaser reveal-on-scroll" aria-labelledby="cake-teaser-title">
+            <div class="cake-teaser-card">
+                <div class="cake-teaser-copy">
+                    <span class="cake-teaser-tag">🎂 Bespoke Creations</span>
+                    <h2 id="cake-teaser-title">Designing your sweet celebrations.</h2>
+                    <p>From whimsical birthday layers to tiered wedding gateaux and corporate gatherings, our master pastry chefs bring your dream confection to life with edible florals and custom piping.</p>
+                    <div class="cake-teaser-features">
+                        <span>✨ Custom Flavors &amp; Fillings</span>
+                        <span>🍓 Organic Local Strawberries</span>
+                        <span>🚚 Temperature Controlled Delivery</span>
+                    </div>
+                    <div class="cake-teaser-actions">
+                        <a class="button button-coral" href="./pages/contact.html">Request Custom Cake Quote &rarr;</a>
+                        <a class="text-link" href="./pages/menu.html?category=cake">Browse signature cakes &rarr;</a>
+                    </div>
+                </div>
+                <div class="cake-teaser-visual">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&amp;fit=crop&amp;w=700&amp;h=700&amp;q=85" alt="Custom Chocolate Ganache Birthday Cake" loading="lazy" decoding="async">
+                    <div class="cake-teaser-badge">
+                        <span>48-Hour Notice</span>
+                        <strong>Handcrafted with Care</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promotion Strip -->
+        <section class="promotion-strip reveal-on-scroll" aria-labelledby="promotion-title">
+            <div class="promotion-copy">
+                <span class="promo-badge-ribbon">Special Welcome Offer</span>
+                <p class="eyebrow">A LITTLE EXTRA JOY</p>
+                <h2 id="promotion-title">Free mini pastry on orders over $15</h2>
+                <p>Enter promo code <strong class="promo-code-highlight">CAKERY10</strong> at checkout to unlock 10% off your first online bakehouse order this month.</p>
+            </div>
+            <a class="button button-primary" href="./pages/menu.html">Build Your Basket <span aria-hidden="true">&rarr;</span></a>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section class="home-section testimonial-section reveal-on-scroll" aria-labelledby="testimonial-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">CUSTOMER STORIES</p>
+                    <h2 id="testimonial-title">Loved by slow mornings &amp; sweet celebrations.</h2>
+                </div>
+                <div class="rating-badge-summary">
+                    <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    <strong>4.9 / 5.0</strong>
+                    <small>(850+ local reviews)</small>
+                </div>
+            </div>
+            <div class="testimonial-grid">
+                <blockquote>
+                    <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p>“The croissants are flaky perfection, shattering at the first bite, and the whole bakery smells like pure butter and espresso. Truly the best in Phnom Penh.”</p>
+                    <footer>
+                        <strong>Dara S.</strong>
+                        <span class="testi-author-role">Boeung Keng Kang 1 &bull; Verified Foodie</span>
+                    </footer>
+                </blockquote>
+                <blockquote>
+                    <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p>“We ordered the Chocolate Strawberry Truffle cake for our daughter's birthday. It looked like fine art and wasn't overly sweet—everyone asked where we got it!”</p>
+                    <footer>
+                        <strong>Lina M.</strong>
+                        <span class="testi-author-role">Toul Kork &bull; Birthday Order</span>
+                    </footer>
+                </blockquote>
+                <blockquote>
+                    <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p>“Super fast delivery via the website, thoughtful eco-friendly boxes, and the iced Mondulkiri coffee gave me the exact morning energy boost I needed.”</p>
+                    <footer>
+                        <strong>Vuthy P.</strong>
+                        <span class="testi-author-role">BKK1 &bull; Daily Morning Regular</span>
+                    </footer>
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- Counter Gallery Section -->
+        <section class="home-section gallery-section reveal-on-scroll" aria-labelledby="gallery-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">FROM OUR COUNTER</p>
+                    <h2 id="gallery-title">Daily snapshots from the ovens.</h2>
+                </div>
+                <a class="text-link" href="https://instagram.com" target="_blank" rel="noreferrer">Follow @cakerycharm on Instagram <span aria-hidden="true">&rarr;</span></a>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&amp;fit=crop&amp;w=600&amp;h=600&amp;q=85" alt="Celebration cake">
+                    <span class="gallery-tag">#TruffleCake</span>
+                </div>
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&amp;fit=crop&amp;w=600&amp;h=600&amp;q=85" alt="Fresh coffee">
+                    <span class="gallery-tag">#IcedEspresso</span>
+                </div>
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&amp;fit=crop&amp;w=600&amp;h=600&amp;q=85" alt="Croissants">
+                    <span class="gallery-tag">#ButterFlakes</span>
+                </div>
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&amp;fit=crop&amp;w=600&amp;h=600&amp;q=85" alt="Fresh sandwich">
+                    <span class="gallery-tag">#ArtisanBrioche</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visit & Delivery Partners Strip -->
+        <section class="visit-strip reveal-on-scroll" aria-labelledby="visit-title">
+            <div class="visit-info-group">
+                <span class="visit-live-status"><span class="live-pulse"></span> Open Now &bull; Dine-in &amp; Takeaway</span>
+                <h2 id="visit-title">Your neighborhood corner in Phnom Penh.</h2>
+                <p>Street 371, Boeung Tumpun, Phnom Penh, Cambodia<br><strong>Mon – Sat:</strong> 7:00 AM – 9:00 PM &bull; <strong>Sun:</strong> 8:00 AM – 7:00 PM</p>
+            </div>
+            <div class="visit-actions-group">
+                <a class="button button-primary" href="./pages/contact.html">Get Directions &amp; Contact &rarr;</a>
+                <div class="visit-partners-box">
+                    <span>Direct Delivery on:</span>
+                    <div class="partner-pills-row">
+                        <span class="partner-pill">🛵 GrabFood</span>
+                        <span class="partner-pill">🐼 Foodpanda</span>
+                        <span class="partner-pill">⚡ Nham24</span>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <aside class="order-summary" id="order-summary" aria-label="Order summary" aria-hidden="true"><div class="order-head"><h2>Your cart</h2><button class="close-order" type="button" aria-label="Close order summary">&#10005;</button></div><div class="order-items"><p class="empty-order">Your order is waiting for something warm.</p></div><div class="order-breakdown"><div><span>Subtotal</span><strong>$<span id="cart-subtotal">0.00</span></strong></div><div><span>Delivery</span><strong>$<span id="cart-delivery">3.00</span></strong></div><div class="order-total"><span>Total</span><strong>$<span id="cart-total">0.00</span></strong></div></div><a class="button button-primary checkout-button" href="./pages/checkout.html">Proceed to checkout <span aria-hidden="true">&#8594;</span></a></aside>
+
+    <!-- Slide-over Order Cart Summary -->
+    <aside class="order-summary" id="order-summary" aria-label="Order summary" aria-hidden="true">
+        <div class="order-head">
+            <h2>Your Order Cart</h2>
+            <button class="close-order" type="button" aria-label="Close order summary">&#10005;</button>
+        </div>
+        <div class="order-items">
+            <p class="empty-order">Your order is waiting for something warm.</p>
+        </div>
+        <div class="order-breakdown">
+            <div><span>Subtotal</span><strong>$<span id="cart-subtotal">0.00</span></strong></div>
+            <div><span>Delivery</span><strong>$<span id="cart-delivery">3.00</span></strong></div>
+            <div class="order-total"><span>Total</span><strong>$<span id="cart-total">0.00</span></strong></div>
+        </div>
+        <a class="button button-primary checkout-button" href="./pages/checkout.html">Proceed to checkout <span aria-hidden="true">&rarr;</span></a>
+    </aside>
+
     <div class="order-toast" role="status" aria-live="polite"></div>
-    <footer class="site-footer"><div><a class="footer-brand" href="index.html">Cakery Charm</a><p>Fresh, delicious treats baked daily.<br>Made for slow mornings and sweet celebrations.</p></div><div><h2>Say hello</h2><a href="tel:123456789">123-456-789</a><a href="mailto:cakerycharm@gmail.com">cakerycharm@gmail.com</a></div><div><h2>Follow along</h2><a href="https://instagram.com" rel="noreferrer">Instagram</a><a href="https://facebook.com" rel="noreferrer">Facebook</a></div></footer>
+
+    <!-- Product Customization Modal (Supported on Home page too) -->
+    <div class="product-modal" id="product-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-name">
+        <div class="product-sheet">
+            <button class="modal-close" type="button" aria-label="Close product details">&#10005;</button>
+            <div class="modal-image-wrap">
+                <img id="modal-image" src="" alt="Product preview">
+            </div>
+            <div class="modal-body-content">
+                <p class="eyebrow">FRESH FROM OUR OVEN</p>
+                <h2 id="modal-name"></h2>
+                <p id="modal-description"></p>
+                <div class="modal-options">
+                    <fieldset>
+                        <legend>Select Option / Size</legend>
+                    </fieldset>
+                    <div class="modal-order">
+                        <label for="modal-quantity">Quantity</label>
+                        <div class="modal-stepper-wrap">
+                            <button class="quantity-step" id="quantity-minus" type="button" aria-label="Decrease quantity">&#8722;</button>
+                            <input id="modal-quantity" type="number" min="1" max="20" value="1">
+                            <button class="quantity-step" id="quantity-plus" type="button" aria-label="Increase quantity">&#43;</button>
+                        </div>
+                        <div class="modal-price-display">
+                            <span>Total Price</span>
+                            <strong id="modal-price">$0.00</strong>
+                        </div>
+                    </div>
+                </div>
+                <button class="button button-primary" id="modal-add" type="button">Add to Basket &bull; <span id="modal-cta-tag">Order Now</span> <span aria-hidden="true">&rarr;</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer-wrapper">
+        <div class="site-footer-container">
+            <!-- Newsletter Club Invitation -->
+            <div class="footer-newsletter-box reveal-on-scroll">
+                <div class="footer-newsletter-text">
+                    <span class="footer-newsletter-tag">✨ Join The Cakery Circle</span>
+                    <h2 class="footer-newsletter-title">Slow mornings, sweet treats.</h2>
+                    <p class="footer-newsletter-desc">Subscribe to receive weekend secret recipes, morning warm bread alerts, and 10% off your next order.</p>
+                </div>
+                <form class="footer-newsletter-form" id="footer-newsletter-form">
+                    <input class="footer-newsletter-input" id="footer-newsletter-email" type="email" placeholder="Enter your email address..." required aria-label="Your email address">
+                    <button class="footer-newsletter-btn" type="submit">Join Club &rarr;</button>
+                    <p class="newsletter-status-msg" id="newsletter-status-msg" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+
+            <!-- Footer Main Grid -->
+            <div class="footer-main-grid">
+                <!-- Column 1: Brand & Heritage -->
+                <div class="footer-brand-col">
+                    <a class="footer-brand-header" href="index.html">
+                        <img class="footer-brand-logo" src="./images/logo.png" alt="Cakery Charm Logo">
+                        <div>
+                            <span class="footer-brand-name">Cakery Charm</span>
+                            <span class="footer-brand-tag">Artisan Bakehouse &amp; Cafe</span>
+                        </div>
+                    </a>
+                    <p class="footer-bio">A warm neighborhood bakery crafted for slow mornings, sweet celebrations, and freshly brewed coffees in Phnom Penh.</p>
+                    <div class="footer-badges-list">
+                        <span class="footer-badge-pill">🥐 Daily Small Batch</span>
+                        <span class="footer-badge-pill">🧈 100% French Butter</span>
+                        <span class="footer-badge-pill">☕ Specialty Roast</span>
+                    </div>
+                </div>
+
+                <!-- Column 2: Explore Navigation -->
+                <div class="footer-nav-col">
+                    <h3 class="footer-col-title">Explore</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="./pages/menu.html">Artisan Menu</a></li>
+                        <li><a href="./pages/about.html">Our Story</a></li>
+                        <li><a href="./pages/contact.html">Custom Cakes</a></li>
+                        <li><a href="./pages/checkout.html">Quick Checkout</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Hours & Location -->
+                <div class="footer-info-col">
+                    <h3 class="footer-col-title">Visit Bakehouse</h3>
+                    <ul class="footer-info-list">
+                        <li>
+                            <span class="info-icon">📍</span>
+                            <span>Street 371, Boeung Tumpun, Phnom Penh, Cambodia</span>
+                        </li>
+                        <li>
+                            <span class="info-icon">⏰</span>
+                            <span>Mon – Sat: 7:00 AM – 9:00 PM<br>Sun: 8:00 AM – 7:00 PM</span>
+                        </li>
+                        <li>
+                            <span class="info-icon">📞</span>
+                            <a href="tel:123456789">+855 12 345 678</a>
+                        </li>
+                        <li>
+                            <span class="info-icon">✉️</span>
+                            <a href="mailto:cakerycharm@gmail.com">cakerycharm@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Social & Delivery -->
+                <div class="footer-social-col">
+                    <h3 class="footer-col-title">Follow Along</h3>
+                    <div class="footer-social-wrap">
+                        <a class="footer-social-btn" href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2" fill="none"></circle><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" fill="none"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor"></circle></svg>
+                        </a>
+                        <a class="footer-social-btn" href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                    </div>
+                    <div class="delivery-partners-note">
+                        <strong>Delivery Available on:</strong>
+                        <span>GrabFood &bull; Foodpanda &bull; Nham24 &bull; Direct Phone Order</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Bar -->
+            <div class="footer-bottom-bar">
+                <p>&copy; 2026 Cakery Charm Bakehouse. Baked with love &amp; care in Phnom Penh.</p>
+                <ul class="footer-bottom-links">
+                    <li><a href="./pages/about.html">Privacy</a></li>
+                    <li><a href="./pages/about.html">Terms</a></li>
+                    <li><a href="./pages/contact.html">Contact Us</a></li>
+                </ul>
+                <button class="back-to-top-btn" id="back-to-top-btn" type="button" aria-label="Scroll back to top">
+                    <span>Back to top</span> &uarr;
+                </button>
+            </div>
+        </div>
+    </footer>
+
     <script type="module" src="js/home.js"></script>
     <script type="module" src="js/app.js"></script>
     <script src="pages/components/banner/banner.js" defer></script>

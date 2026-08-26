@@ -7,11 +7,162 @@
   <meta name="description" content="Track your Cakery Charm order.">
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/flow.css">
+  <link rel="stylesheet" href="../css/header-footer.css">
 </head>
 <body>
-  <nav class="site-nav"><a class="nav-left" href="../index.html" aria-label="Cakery Charm home"><img class="logo" src="../images/logo.png" alt=""><span>Cakery Charm</span></a><div class="nav-right"><ul><li><a href="../index.html">Home</a></li><li><a href="menu.html">Menu</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a class="cart-button" href="menu.html" aria-label="Return to menu"><span aria-hidden="true">&#128722;</span><strong>0</strong></a></li></ul></div></nav>
-  <main class="order-page"><section class="order-success"><div class="success-mark" aria-hidden="true">&#10003;</div><p class="eyebrow">ORDER CONFIRMED</p><h1>We are baking happiness.</h1><p>Your order <strong id="order-id">...</strong> is on its way through our kitchen.</p><div class="order-tracker"><div class="status-progress"></div><div class="status-step"><span>01</span><strong>Order received</strong></div><div class="status-step"><span>02</span><strong>Payment confirmed</strong></div><div class="status-step is-current"><span>03</span><strong id="order-status">Preparing your order</strong></div><div class="status-step"><span>04</span><strong>Baking</strong></div><div class="status-step"><span>05</span><strong>Ready for pickup</strong></div></div><p class="ready-note">Estimated ready time<br><strong>25-35 minutes</strong></p><div class="order-actions"><a class="button button-primary" href="menu.html">Order again <span aria-hidden="true">&#8594;</span></a><button class="button button-quiet" id="cancel-order" type="button">Cancel order</button></div><p class="order-message" role="status" aria-live="polite"></p><details class="order-history"><summary>View order summary</summary><div id="order-items"></div></details></section></main>
-  <footer class="site-footer"><div><a class="footer-brand" href="../index.html">Cakery Charm</a><p>Fresh, delicious treats baked daily.<br>Made for slow mornings and sweet celebrations.</p></div><div><h2>Say hello</h2><a href="tel:123456789">123-456-789</a><a href="mailto:cakerycharm@gmail.com">cakerycharm@gmail.com</a></div><div><h2>Follow along</h2><a href="https://instagram.com" rel="noreferrer">Instagram</a><a href="https://facebook.com" rel="noreferrer">Facebook</a></div></footer>
+  <div class="page-loader" aria-label="Loading Cakery Charm"><div class="loader-mark"><img src="../images/logo.png" alt=""><span>Cakery Charm</span><small>baking happiness...</small><i></i></div></div>
+
+  <!-- Top Announcement Bar -->
+  <div class="site-topbar">
+      <div class="topbar-highlight">
+          <span class="topbar-badge">Fresh Batch</span>
+          <span>Warm ovens every morning at 7:00 AM • Free mini pastry on orders over $15</span>
+      </div>
+      <div class="topbar-info">
+          <span>📍 Boeung Tumpun, Phnom Penh</span>
+          <span>⏰ 7:00 AM – 9:00 PM</span>
+          <span>📞 <a href="tel:123456789">123-456-789</a></span>
+      </div>
+  </div>
+
+  <!-- Main Header Navigation -->
+  <header class="site-header">
+      <div class="header-inner">
+          <a class="brand-link" href="../index.html" aria-label="Cakery Charm Bakehouse">
+              <div class="brand-logo-wrap">
+                  <img src="../images/logo.png" alt="Cakery Charm Logo">
+              </div>
+              <div class="brand-text">
+                  <span class="brand-title">Cakery Charm</span>
+                  <span class="brand-subtitle">Artisan Bakehouse &amp; Cafe</span>
+              </div>
+          </a>
+
+          <nav class="nav-links-wrap" aria-label="Main Navigation">
+              <ul class="nav-list">
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="menu.html">Menu <span class="nav-badge-new">Fresh</span></a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+              </ul>
+          </nav>
+
+          <div class="header-actions">
+              <a class="header-cta" href="menu.html">Browse Menu <span aria-hidden="true">&rarr;</span></a>
+              <a class="header-cart-btn cart-button" href="menu.html" aria-label="Return to menu">
+                  <svg class="cart-icon-svg" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                  <span class="cart-badge-count" id="cart-count">0</span>
+              </a>
+              <button class="mobile-toggle-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+                  <span></span>
+              </button>
+          </div>
+      </div>
+  </header>
+  <main class="order-page"><section class="order-success reveal-on-scroll"><div class="success-mark" aria-hidden="true">&#10003;</div><p class="eyebrow">ORDER CONFIRMED</p><h1>We are baking happiness.</h1><p>Your order <strong id="order-id">...</strong> is on its way through our kitchen.</p><div class="order-tracker"><div class="status-progress"></div><div class="status-step"><span>01</span><strong>Order received</strong></div><div class="status-step"><span>02</span><strong>Payment confirmed</strong></div><div class="status-step is-current"><span>03</span><strong id="order-status">Preparing your order</strong></div><div class="status-step"><span>04</span><strong>Baking</strong></div><div class="status-step"><span>05</span><strong>Ready for pickup</strong></div></div><p class="ready-note">Estimated ready time<br><strong>25-35 minutes</strong></p><div class="order-actions"><a class="button button-primary" href="menu.html">Order again <span aria-hidden="true">&#8594;</span></a><button class="button button-quiet" id="cancel-order" type="button">Cancel order</button></div><p class="order-message" role="status" aria-live="polite"></p><details class="order-history"><summary>View order summary</summary><div id="order-items"></div></details></section></main>
+  <footer class="site-footer-wrapper">
+      <div class="site-footer-container">
+          <!-- Newsletter Club Invitation -->
+          <div class="footer-newsletter-box reveal-on-scroll">
+              <div class="footer-newsletter-text">
+                  <span class="footer-newsletter-tag">✨ Join The Cakery Circle</span>
+                  <h2 class="footer-newsletter-title">Slow mornings, sweet treats.</h2>
+                  <p class="footer-newsletter-desc">Subscribe to receive weekend secret recipes, morning warm bread alerts, and 10% off your next order.</p>
+              </div>
+              <form class="footer-newsletter-form" id="footer-newsletter-form">
+                  <input class="footer-newsletter-input" id="footer-newsletter-email" type="email" placeholder="Enter your email address..." required aria-label="Your email address">
+                  <button class="footer-newsletter-btn" type="submit">Join Club &rarr;</button>
+                  <p class="newsletter-status-msg" id="newsletter-status-msg" role="status" aria-live="polite"></p>
+              </form>
+          </div>
+
+          <!-- Footer Main Grid -->
+          <div class="footer-main-grid">
+              <!-- Column 1: Brand & Heritage -->
+              <div class="footer-brand-col">
+                  <a class="footer-brand-header" href="../index.html">
+                      <img class="footer-brand-logo" src="../images/logo.png" alt="Cakery Charm Logo">
+                      <div>
+                          <span class="footer-brand-name">Cakery Charm</span>
+                          <span class="footer-brand-tag">Artisan Bakehouse &amp; Cafe</span>
+                      </div>
+                  </a>
+                  <p class="footer-bio">A warm neighborhood bakery crafted for slow mornings, sweet celebrations, and freshly brewed coffees in Phnom Penh.</p>
+                  <div class="footer-badges-list">
+                      <span class="footer-badge-pill">🥐 Daily Small Batch</span>
+                      <span class="footer-badge-pill">🧈 100% French Butter</span>
+                      <span class="footer-badge-pill">☕ Specialty Roast</span>
+                  </div>
+              </div>
+
+              <!-- Column 2: Explore Navigation -->
+              <div class="footer-nav-col">
+                  <h3 class="footer-col-title">Explore</h3>
+                  <ul class="footer-links-list">
+                      <li><a href="../index.html">Home</a></li>
+                      <li><a href="menu.html">Artisan Menu</a></li>
+                      <li><a href="about.html">Our Story</a></li>
+                      <li><a href="contact.html">Custom Cakes</a></li>
+                      <li><a href="checkout.html">Quick Checkout</a></li>
+                  </ul>
+              </div>
+
+              <!-- Column 3: Hours & Location -->
+              <div class="footer-info-col">
+                  <h3 class="footer-col-title">Visit Bakehouse</h3>
+                  <ul class="footer-info-list">
+                      <li>
+                          <span class="info-icon">📍</span>
+                          <span>Street 371, Boeung Tumpun, Phnom Penh, Cambodia</span>
+                      </li>
+                      <li>
+                          <span class="info-icon">⏰</span>
+                          <span>Mon – Sat: 7:00 AM – 9:00 PM<br>Sun: 8:00 AM – 7:00 PM</span>
+                        </li>
+                      <li>
+                          <span class="info-icon">📞</span>
+                          <a href="tel:123456789">+855 12 345 678</a>
+                      </li>
+                      <li>
+                          <span class="info-icon">✉️</span>
+                          <a href="mailto:cakerycharm@gmail.com">cakerycharm@gmail.com</a>
+                      </li>
+                  </ul>
+              </div>
+
+              <!-- Column 4: Social & Delivery -->
+              <div class="footer-social-col">
+                  <h3 class="footer-col-title">Follow Along</h3>
+                  <div class="footer-social-wrap">
+                      <a class="footer-social-btn" href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
+                          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2" fill="none"></rect><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" fill="none"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor"></circle></svg>
+                      </a>
+                      <a class="footer-social-btn" href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook">
+                          <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                      </a>
+                  </div>
+                  <div class="delivery-partners-note">
+                        <strong>Delivery Available on:</strong>
+                        <span>GrabFood • Foodpanda • Nham24 • Direct Phone Order</span>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Footer Bottom Bar -->
+          <div class="footer-bottom-bar">
+              <p>&copy; 2026 Cakery Charm Bakehouse. Baked with love &amp; care in Phnom Penh.</p>
+              <ul class="footer-bottom-links">
+                  <li><a href="about.html">Privacy</a></li>
+                  <li><a href="about.html">Terms</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+              <button class="back-to-top-btn" id="back-to-top-btn" type="button" aria-label="Scroll back to top">
+                  <span>Back to top</span> &uarr;
+              </button>
+          </div>
+      </div>
+  </footer>
   <script type="module" src="../js/order.js"></script>
+  <script type="module" src="../js/app.js"></script>
 </body>
 </html>
